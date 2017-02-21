@@ -1,6 +1,9 @@
 <ul class="menu-context margin-vert">
-	{% for item in site.filters %}
+	{% assign sorted_filters = (site.filters | sort: 'version') %}
+	{% assign used = 0 %}
+	{% for item in sorted_filters %}
 		{% if item.title and item.latest_version == item.version %}
+			{% capture used %}{{ count[ item.url ] | true }}{% endcapture %}
 			<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 		{% endif %}
 	{% endfor %}
