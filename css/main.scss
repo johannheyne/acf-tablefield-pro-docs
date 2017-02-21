@@ -48,7 +48,7 @@ body {
 	list-style-type: none;
 
 	li {
-		padding: 0 0.1rem;
+		padding: 0.2rem 0;
 	}
 
 	a {
@@ -56,7 +56,7 @@ body {
 		text-decoration: none;
 	}
 
-	&.active a {
+	.active a {
 		text-decoration: underline;
 	}
 }
