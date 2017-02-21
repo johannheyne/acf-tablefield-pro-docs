@@ -2,3 +2,5 @@ collections:
     filters:
         output: true,
         permalink: filters/:path/
+
+title: ACF-AddOn Tablefield Pro
