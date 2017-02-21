@@ -1,5 +1,6 @@
+$margin-vert: 1rem;
 
 .margin-vert {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-top: $margin-vert;
+	margin-bottom: $margin-vert;
 }
