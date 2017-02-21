@@ -9,7 +9,7 @@
 	<div class="container">
 
 		<nav>
-			<ul>
+			<ul class="menu">
 				{% assign sorted_pages = (site.pages | sort: 'order') %}
 				{% for item in sorted_pages %}
 					{% if item.title %}
