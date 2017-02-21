@@ -1,0 +1,13 @@
+.nav {
+	width: 300px;
+	position: fixed;
+	right: 0;
+	height: 100vh;
+	background-color: $color-grey-light;
+	padding: 1rem 2rem;
+	overflow-x: scroll;
+}
+
+.nav + .page {
+	width: calc( 100% - 300px );
+}
