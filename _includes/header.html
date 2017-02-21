@@ -19,6 +19,7 @@
 				{% for item in sorted_pages %}
 					{% if item.title %}
 						<li {% if item.url == page.url %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
+						{{ item | inspect }}
 					{% endif %}
 				{% endfor %}
 			</ul>
