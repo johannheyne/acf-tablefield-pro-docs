@@ -8,7 +8,7 @@
 
 	<div class="container">
 
-		<nav>
+		<nav class="nav">
 			<ul class="menu">
 				{% assign sorted_pages = (site.pages | sort: 'order') %}
 				{% for item in sorted_pages %}
@@ -19,4 +19,6 @@
 			</ul>
 		</nav>
 
-		<header>Header</header>
+		<main class="main">
+
+			<header class="header">ACF-Plugin "Tablefield Pro" Documentation</header>
