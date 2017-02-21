@@ -8,7 +8,7 @@
 		{% endif %}
 
 		{% assign used[ item.filter ] = 'true' %}
-		{% used[ item.filter ] | inspect %}
+		{{ used[ item.filter ] | inspect }}
 
 	{% endfor %}
 </ul>
