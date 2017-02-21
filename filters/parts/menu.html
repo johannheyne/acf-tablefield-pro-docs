@@ -1,4 +1,4 @@
-<ul class="menu">
+<ul class="menu-context margin-vert">
 	{% for item in site.filters %}
 		{% if item.title %}
 			<li {% if item.url == page.url %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>

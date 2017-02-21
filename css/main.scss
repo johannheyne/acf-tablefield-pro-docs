@@ -15,6 +15,9 @@ body {
 	padding: 1rem 2rem;
 	color: white;
 }
+.header__title {
+	font-size: 2rem;
+}
 
 .menu .active a {
 	text-decoration: none;
@@ -59,4 +62,25 @@ body {
 	.active a {
 		text-decoration: underline;
 	}
+}
+
+.menu-context {
+
+	margin-left: 0;
+	padding: 0;
+	list-style-type: none;
+
+	li {
+		padding: 0.2rem 0;
+	}
+
+	a {
+		color: rgb(31, 120, 255);
+		text-decoration: underline;
+	}
+}
+
+.margin-vert {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
