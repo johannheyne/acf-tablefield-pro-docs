@@ -7,7 +7,8 @@ layout: page
 Overview
 
 <ul>
-{% for page in site.pages %}
+{% assign sorted_pages = (site.pages | sort: 'title') %}
+{% for page in sorted_pages %}
 {% if page.title %}
 <li><a href="{{ page.url, | absolute_url }}" >{{ page.title }}</a></li>
 {% endif %}
