@@ -3,12 +3,15 @@ code {
 	font-size: 1rem;
 }
 
+pre {
+	margin-top: $margin-vert;
+	margin-bottom: $margin-vert;
+}
+
 pre[type]:before {
 	content: attr( type );
 	display: block;
 	background-color: rgb( 52, 58, 69 );
 	color: rgba( 255, 255, 255, 0.6 );
 	padding: 0.2rem 1rem;
-	margin-top: $margin-vert;
-	margin-bottom: $margin-vert;
 }
