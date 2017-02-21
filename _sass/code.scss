@@ -1,0 +1,12 @@
+code {
+	padding: 1rem 2rem !important;
+	font-size: 1rem;
+}
+
+pre[type]:before {
+	content: attr( type );
+	display: block;
+	background-color: rgb( 52, 58, 69 );
+	color: rgba( 255, 255, 255, 0.8 );
+	padding: 0.2rem 1rem;
+}
