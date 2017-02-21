@@ -1,6 +1,6 @@
 <ul class="menu-context margin-vert">
 	{% assign sorted_filters = (site.filters | sort: 'version') %}
-	{% assign used %}
+	{% assign used = '' %}
 	{% for item in sorted_filters reverse %}
 
 		{% if used[ item.filter ] != 'true' %}
