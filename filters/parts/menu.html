@@ -1,11 +1,12 @@
 <ul class="menu-context margin-vert">
 	{% assign sorted_filters = (site.filters | sort: 'version') %}
+
 	{% for item in sorted_filters reverse %}
 
-		{% if {{item.filter}} != true %}
+		{% if used[ item.filter ] != true %}
 			<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 		{% endif %}
-		{% assign {{item.filter}} = true %}
 
+		{% assign used[ item.filter ] = 'true' %}
 	{% endfor %}
 </ul>
