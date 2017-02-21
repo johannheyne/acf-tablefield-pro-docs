@@ -1,3 +1,11 @@
-<link href="{{ "/css/main.css" | absolute_url }}" rel="stylesheet">
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>{{ page.title }}</title>
+	<link href="{{ "/css/main.css" | absolute_url }}" rel="stylesheet">
+</head>
+<body>
 
-<header>Header</header>
+	<div class="container">
+
+		<header>Header</header>
