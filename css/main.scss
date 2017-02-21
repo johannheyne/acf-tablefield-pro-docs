@@ -30,13 +30,14 @@ body {
 .nav {
 	width: 300px;
 	position: fixed;
+	right: 0;
 	height: 100vh;
 	background-color: rgb(230, 230, 230);
 	padding: 1rem 2rem;
 	overflow-x: scroll;
 }
 
-.nav + .main {
+.nav + .page {
 	padding-right: 300px;
 }
 
