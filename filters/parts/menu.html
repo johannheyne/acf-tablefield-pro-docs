@@ -2,7 +2,7 @@
 	{% assign sorted_filters = (site.filters | sort: 'version') %}
 	{% assign used = 0 %}
 	{% for item in sorted_filters %}
-		{% if ! count[ item.url ] %}
+		{% if count[ item.url ] == null %}
 			{% capture used %}{{ count[ item.url ] | true }}{% endcapture %}
 			<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 		{% endif %}
