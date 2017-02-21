@@ -5,7 +5,10 @@ order: 20
 ---
 # The Filters
 
-	{% for item in site.filters %}
-		<h3>{{item.content}}<h3>
-		<pre>{{ item | jsonify }}</pre>
-	{% endfor %}
+	<ul class="menu">
+		{% for item in site.filters %}
+			{% if item.title %}
+				<li {% if item.url == page.url %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
+			{% endif %}
+		{% endfor %}
+	</ul>
