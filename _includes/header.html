@@ -18,7 +18,7 @@
 				{% assign sorted_pages = (site.pages | sort: 'order') %}
 				{% for item in sorted_pages %}
 					{% if item.title %}
-						<li {% if item.url == page.url or ( page.collection and page.collection == item.collection ) %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
+						<li {% if item.url == page.url or ( page.collection != "" and page.collection == item.collection ) %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>
