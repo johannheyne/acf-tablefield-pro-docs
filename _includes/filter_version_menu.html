@@ -1,7 +1,7 @@
-<ul class="menu-context">
-	{% for item in site.filters %}
+<select onchange="if( this.options[this.selectedIndex].value != '' ) location.href=this.options[this.selectedIndex].value;">
+    {% for item in site.filters %}
 		{% if page.filter == item.filter %}
-			<li {% if page.filter == item.filter%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >v{{ item.version }}</a></li>
+			<option {% if page.version == item.version%}selected{% endif %} value="{{ item.url, | absolute_url }}" >v{{ item.version }}</option>
 		{% endif %}
 	{% endfor %}
-</ul>
+</select>
