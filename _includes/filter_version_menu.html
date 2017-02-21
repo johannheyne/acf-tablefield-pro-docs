@@ -1,7 +1,7 @@
-<ul>
+<ul class="menu-context">
 	{% for item in site.filters %}
-		{% if item.title and item.latest_version == item.version %}
-			<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
+		{% if page.filter == item.filter %}
+			<li {% if page.filter == item.filter%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >v{{ item.version }}</a></li>
 		{% endif %}
 	{% endfor %}
 </ul>
