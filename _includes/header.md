@@ -11,9 +11,9 @@
 		<nav>
 			<ul>
 				{% assign sorted_pages = (site.pages | sort: 'order') %}
-				{% for page in sorted_pages %}
-					{% if page.title %}
-						<li><a href="{{ page.url, | absolute_url }}" >{{ page.title }}</a></li>
+				{% for item in sorted_pages %}
+					{% if item.title %}
+						<li {% if item.url == page.url %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>
