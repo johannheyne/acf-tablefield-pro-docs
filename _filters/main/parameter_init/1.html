@@ -8,8 +8,11 @@ version: 1
 
 <h1>Parameter Init</h1>
 
-<pre type="JS"><code class="language-js">ACFTableField.core.add_filter( 'main', 'param_init', function( param ) {
+{% include codeblock.html
+lang="JS"
+style="js"
+code="ACFTableField.core.add_filter( 'main', 'param_init', function( param ) {
 
     return param;
-} );
-</code></pre>
+} );"
+%}

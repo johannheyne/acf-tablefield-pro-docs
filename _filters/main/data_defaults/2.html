@@ -8,8 +8,11 @@ version: 2
 
 <h1>Data Defaults</h1>
 
-<pre type="JS"><code class="language-js">ACFTableField.core.add_filter( 'main', 'data_defaults', function( data ) {
+{% include codeblock.html
+lang="JS"
+style="js"
+code="ACFTableField.core.add_filter( 'main', 'data_defaults', function( data ) {
 
     return data;
-} );
-</code></pre>
+} );"
+%}
