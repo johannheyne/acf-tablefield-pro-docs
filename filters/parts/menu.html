@@ -1,5 +1,5 @@
 <ul class="menu-context margin-vert">
-	{% assign usedFilters = [] %}
+	{% assign usedFilters = "" | split: "|" %}
 	{% assign sorted_filters = (site.filters | sort: 'version') %}
 
 	{% for item in sorted_filters reverse %}
