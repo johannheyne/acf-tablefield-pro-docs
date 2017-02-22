@@ -1,13 +1,15 @@
 {% assign sorted_filters = site.filters | sort: 'version', 'last' %}
-{{ sorted_filters | jsonify }}
+
 <hl>
 {% assign grouped_filters = sorted_filters | group_by: 'filter' %}
-{{ grouped_filters | jsonify }}
+
 <ul class="menu-context margin-vert">
 
-	{% for item in sorted_filters %}
+	{% for item in grouped_filters %}
 
-			<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
+		{{ item.items | jsonify }}
+		<br><br>
+			<!--<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>-->
 
 	{% endfor %}
 </ul>
