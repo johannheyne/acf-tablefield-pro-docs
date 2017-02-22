@@ -62,7 +62,7 @@ code {
 		}
 	}
 
-	&:hover.not(.closed) .fa-angle-up {
+	&:hover:not(.closed) .fa-angle-up {
 		display: block;
 	}
 
