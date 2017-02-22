@@ -5,6 +5,11 @@ collections:
         output: true,
         permalink: filters/:path/
 
+    topics:
+        output: true,
+        permalink: topics/:path/
+
 
 urls:
     filters: filters/
+    topics: topics/
