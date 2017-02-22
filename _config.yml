@@ -4,3 +4,4 @@ collections:
     filters:
         output: true,
         permalink: filters/:path/
+        baseurl: filters
