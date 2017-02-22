@@ -1,0 +1,11 @@
+.sample-table {
+	border: 1px solid $color-grey-medium;
+
+	th, td {
+		padding: 4px 10px;
+	}
+
+	th {
+		background-color: $color-grey-light;
+	}
+}
