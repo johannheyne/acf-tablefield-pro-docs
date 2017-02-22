@@ -31,7 +31,10 @@ The table above is stored in the database as a JSON string below.
 {% include codeblock.html
 lang="JS"
 style="js"
-code="{
+code="Code"
+%}
+
+{
 	\"p\":{
 		\"o\":{
 			\"uh\":1
@@ -55,5 +58,4 @@ code="{
 			{\"c\":\"thing\"}
 		]
 	]
-}"
-%}
+}
