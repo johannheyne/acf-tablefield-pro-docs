@@ -9,22 +9,7 @@ layout: page
 
 The table field data are stored as a single JSON string.
 
-<table>
-	<thead>
-		<th>A</th>
-		<th>B</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td>some</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>thing</td>
-		</tr>
-	</tbody>
-</table>
+
 
 The table above is stored in the database as a JSON string below.
 
