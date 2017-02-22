@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: ACF Pro Table Field add-on
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -32,3 +32,19 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+
+
+collections:
+    filters:
+        output: true,
+        permalink: filters/:path/
+
+    topics:
+        output: true,
+        permalink: topics/:path/
+
+
+urls:
+    filters: filters/
+    topics: topics/
