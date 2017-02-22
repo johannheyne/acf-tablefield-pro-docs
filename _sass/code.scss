@@ -6,8 +6,8 @@ code {
 pre {
 	margin-top: $margin-vert;
 	margin-bottom: $margin-vert;
-	background: #f7f7f9;
-	border: 1px solid #e1e1e8;
+	background-color: #f7f7f9 !important;
+	border: 1px solid #e1e1e8 !important;
 
 	&::selection {
 
