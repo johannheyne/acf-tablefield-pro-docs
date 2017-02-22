@@ -1,13 +1,9 @@
-code {
-	padding: 1rem 2rem !important;
-	font-size: 1rem;
-}
-
 pre {
 	margin-top: $margin-vert;
 	margin-bottom: $margin-vert;
 	background-color: #f7f7f9 !important;
 	border: 1px solid #e1e1e8 !important;
+	padding: 0 !important;
 
 	&::selection {
 
@@ -18,9 +14,14 @@ pre {
 	&[type]:before {
 		content: attr( type );
 		display: block;
-		background-color: rgba( 266, 255, 255, 0.2 );
-		border-bottom: rgba( 0, 0, 0, 0.1 );
+		background-color: rgba( 266, 255, 255, 0.5 );
+		border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
 		color: rgba( 0, 0, 0, 0.6 );
 		padding: 0.2rem 1rem;
 	}
+}
+
+code {
+	padding: 1rem 2rem !important;
+	font-size: 1rem;
 }
