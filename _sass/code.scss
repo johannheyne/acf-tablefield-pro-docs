@@ -1,19 +1,6 @@
 code {
 	padding: 1rem 2rem !important;
 	font-size: 1rem;
-}
-
-pre {
-	margin-top: $margin-vert;
-	margin-bottom: $margin-vert;
-	background-color: #f7f7f9 !important;
-	border: 1px solid #e1e1e8 !important;
-
-	&::selection {
-
-		text-shadow: none;
-		background: #b3d4fc;
-	}
 
 	&[type]:before {
 		content: attr( type );
@@ -30,5 +17,18 @@ pre {
 		position: absolute;
 		top: 20px;
 		right: 20px;
+	}
+}
+
+pre {
+	margin-top: $margin-vert;
+	margin-bottom: $margin-vert;
+	background-color: #f7f7f9 !important;
+	border: 1px solid #e1e1e8 !important;
+
+	&::selection {
+
+		text-shadow: none;
+		background: #b3d4fc;
 	}
 }
