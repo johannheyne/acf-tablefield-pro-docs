@@ -75,7 +75,7 @@ code="{
 }"
 %}
 
-The object `"p"` stands for parameters. This parameter object has an object `"o"` which stands for options.
+The object `"p"` stands for parameters of this table. This parameter object has an object `"o"` which stands for options.
 
 ### Table Options
 
