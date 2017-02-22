@@ -30,8 +30,8 @@
 				{% for item in sorted_topics %}
 					{% if item.title %}
 					{{page.collection | jsonify}}
-					{{item.sub_collection | jsonify}}
-						<li {% if item.url == page.url or page.collection == item.sub_collection %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
+					{{item.topic | jsonify}}
+						<li {% if item.url == page.url or page.collection == item.topic %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>
