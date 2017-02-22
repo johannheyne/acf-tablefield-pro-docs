@@ -26,14 +26,7 @@
 					{% endif %}
 				{% endfor %}
 
-				{% assign sorted_topics = (site.topics | sort: 'title') %}
-				{% for item in sorted_topics %}
-					{% if item.title %}
-					{{page.collection | jsonify}}
-					{{item.topic | jsonify}}
-						<li {% if item.url == page.url or page.collection == item.topic %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
-					{% endif %}
-				{% endfor %}
+
 			</ul>
 		</nav>
 
