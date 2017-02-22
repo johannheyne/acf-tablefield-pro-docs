@@ -10,6 +10,12 @@
 
 	a {
 		color: $color-blue;
+		text-decoration: none;
+		transition: all 0.3s;
+	}
+
+	li:hover a {
+		color: darken( $color-blue, 20 );
 		text-decoration: underline;
 	}
 }
