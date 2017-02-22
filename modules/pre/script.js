@@ -7,7 +7,7 @@ jQuery( document ).ready( function( $ ) {
 
 			var that = $( this );
 
-				that.toggle( 'closed' );
+				that.toggleClass( 'closed' );
 		} );
 
 });
