@@ -12,9 +12,9 @@
 		{{ item.items[0].version | jsonify }}<br>
 
 		{% assign index = item.items | size %}
-		{% assign index = index | minus:1 %}
+		{% assign index2 = index - 1 %}
 
-		{{ index | jsonify }}<br>
+		{{ index2 | jsonify }}<br>
 		<br><br>
 			<!--<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>-->
 
