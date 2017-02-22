@@ -6,12 +6,29 @@ code {
 pre {
 	margin-top: $margin-vert;
 	margin-bottom: $margin-vert;
-}
+	background: #f7f7f9;
+	border: 1px solid #e1e1e8;
 
-pre[type]:before {
-	content: attr( type );
-	display: block;
-	background-color: rgb( 52, 58, 69 );
-	color: rgba( 255, 255, 255, 0.6 );
-	padding: 0.2rem 1rem;
+	&::selection {
+
+		text-shadow: none;
+		background: #b3d4fc;
+	}
+
+	&[type]:before {
+		content: attr( type );
+		display: block;
+		background-color: rgb( 52, 58, 69 );
+		color: rgba( 255, 255, 255, 0.6 );
+		padding: 0.2rem 1rem;
+	}
+
+	&:before {
+		font-size: 13px;
+		text-transform: uppercase;
+		color: #cbccce;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
 }
