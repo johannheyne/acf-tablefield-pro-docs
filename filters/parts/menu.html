@@ -12,7 +12,7 @@
 		{{ item.items[0].version | jsonify }}<br>
 
 		{% assign index = item.items | size %}
-		{% assign index = index - 1 %}
+		{% assign index = index | minus:1 %}
 
 		{{ index | jsonify }}<br>
 		<br><br>
