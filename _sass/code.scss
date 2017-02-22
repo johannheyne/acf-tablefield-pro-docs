@@ -63,6 +63,7 @@ code {
 		}
 	}
 
+	// show close btn on hover if code is not closed
 	&:hover:not(.closed) .fa-angle-up {
 		display: block;
 	}
