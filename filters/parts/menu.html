@@ -7,7 +7,9 @@
 
 	{% for item in grouped_filters %}
 
-		{{ item.items | jsonify }}
+		{{ item.iname | jsonify }}<br>
+		{{ item.items[0].filter | jsonify }}<br>
+		{{ item.items[0].version | jsonify }}}<br>
 		<br><br>
 			<!--<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>-->
 
