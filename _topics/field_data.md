@@ -11,8 +11,8 @@ The table field data are stored as a single JSON string.
 
 <table>
 	<thead>
-		<th>A</td>
-		<th>B</td>
+		<th>A</th>
+		<th>B</th>
 	</thead>
 	<tbody>
 		<tr>
@@ -26,7 +26,7 @@ The table field data are stored as a single JSON string.
 	</tbody>
 </table>
 
-The table above results in a JSON string below.
+The table above is stored in the database as a JSON string below.
 
 {% include codeblock.html
 lang="JS"
