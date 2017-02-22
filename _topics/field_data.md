@@ -4,11 +4,11 @@ topic: fields_data
 layout: page
 ---
 
-<h1>Field Data</h1>
+# Field Data
 
 {% include topic_menu.html %}
 
-Example table.
+## Example table
 
 <table class="sample-table">
 	<thead>
@@ -30,7 +30,7 @@ Example table.
 A table fields data are stored as a single JSON string. The table above is stored in the database as the following JSON string…
 
 {% include codeblock.html
-lang="JS"
+title=".json"
 style="js"
 code="{
 	&quot;p&quot;:{
@@ -59,11 +59,23 @@ code="{
 }"
 %}
 
-The JSON string has multiple sections and begins with an object `"p"` which stands for parameters.
+
 
 ## Table Parameter
 
-This parameter object has an object `"o"` which stands for options.
+{% include codeblock.html
+lang=".json"
+style="js"
+code="{
+	&quot;p&quot;:{
+		&quot;o&quot;:{
+			&quot;uh&quot;:1
+		}
+	}
+}"
+%}
+
+The object `"p"` stands for parameters. This parameter object has an object `"o"` which stands for options.
 
 ### Table Options
 
