@@ -1,8 +1,8 @@
 {% assign sorted_filters = site.filters | sort: 'version', 'last' %}
-{{ sorted_filters | inspect }}
+{{ sorted_filters | jsonify }}
 <hl>
 {% assign grouped_filters = sorted_filters | group_by: 'filter' %}
-{{ grouped_filters | inspect }}
+{{ grouped_filters | jsonify }}
 <ul class="menu-context margin-vert">
 
 	{% for item in sorted_filters %}
