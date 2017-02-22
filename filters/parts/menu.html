@@ -1,8 +1,10 @@
+{% assign sorted_filters = site.filters | sort: 'version', 'first' %}
+{{ sorted_filters | inspect }}
+<hl>
+{% assign grouped_filters = sorted_filters | group_by: 'filter' %}
+{{ grouped_filters | inspect }}
 <ul class="menu-context margin-vert">
-	{% assign sorted_filters = (site.filters | sort: 'version', 'first' ) %}
-	{{ sorted_filters | inspect }}
-	{% assign grouped_filters = (sorted_filters | group_by: 'filter' ) %}
-	{{ grouped_filters | inspect }}
+
 	{% for item in sorted_filters %}
 
 			<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
