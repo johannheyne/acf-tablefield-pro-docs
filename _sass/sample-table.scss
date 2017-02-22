@@ -1,8 +1,15 @@
 .sample-table {
+
+	margin-top: $margin-vert;
+	margin-bottom: $margin-vert;
+	border-collapse: collapse;
+	font-size: 0.8rem;
+
 	border: 1px solid $color-grey-medium;
 
 	th, td {
-		padding: 4px 10px;
+		padding: 6px 12px;
+		border: 1px solid $color-grey-medium;
 	}
 
 	th {
