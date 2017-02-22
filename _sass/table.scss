@@ -1,0 +1,18 @@
+table {
+
+	margin-top: $margin-vert;
+	margin-bottom: $margin-vert;
+	border-collapse: collapse;
+
+	border: 1px solid $color-grey-light;
+	background: transparent;
+
+	th, td {
+		padding: 6px 12px;
+		border: 1px solid $color-grey-light;
+		background: transparent;
+	}
+
+	th {
+	}
+}

@@ -7,7 +7,7 @@ layout: page
 
 {% include topic_menu.html %}
 
-The table field data are stored as a single JSON string.
+Example table.
 
 <table class="sample-table">
 	<thead>
@@ -26,7 +26,7 @@ The table field data are stored as a single JSON string.
 	</tbody>
 </table>
 
-The table above is stored in the database as a JSON string below.
+A table fields data are stored as a single JSON string. The table above is stored in the database as the following JSON string…
 
 {% include codeblock.html
 lang="JS"
@@ -57,3 +57,15 @@ code="{
 	]
 }"
 %}
+
+The JSON string has multiple sections and begins with an object `"p"` which stands for parameters.
+
+## Table Parameter
+
+This parameter object has an object `"o"` which stands for options.
+
+### Table Options
+
+| Name           | Type           | Decription     |
+| :------------- | :------------- | :------------- |
+| uh             | boolean        | Use header     |

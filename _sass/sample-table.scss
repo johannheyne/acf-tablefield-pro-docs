@@ -4,15 +4,15 @@
 	margin-bottom: $margin-vert;
 	border-collapse: collapse;
 
-	border: 1px solid $color-grey-medium;
+	border: 1px solid $color-blue-dark;
 
 	th, td {
 		padding: 6px 12px;
-		border: 1px solid $color-grey-medium;
+		border: 1px solid $color-blue-dark;
 		font-size: 0.9rem;
 	}
 
 	th {
-		background-color: $color-grey-light;
+		background-color: transparentize( $color-blue-dark, 0.8 );
 	}
 }

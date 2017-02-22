@@ -1,8 +1,8 @@
 pre {
 	margin-top: $margin-vert;
 	margin-bottom: $margin-vert;
-	background-color: #f7f7f9 !important;
-	border: 1px solid #e1e1e8 !important;
+	background-color: transparentize( $color-blue-dark, 0.95 ) !important;
+	border: 1px solid transparentize( $color-blue-dark, 0.8 ) !important;
 
 	&::selection {
 
@@ -17,7 +17,7 @@ pre {
 		margin-left: -1em;
 		margin-right: -1em;
 		margin-bottom: 1em;
-		background-color: #e1e1e8;
+		background-color: transparentize( $color-blue-dark, 0.8 );
 		//border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
 		color: rgba( 255, 255, 255, 0.9 );
 		padding: 0.2rem 1rem;
@@ -79,4 +79,12 @@ code {
 			display: none;
 		}
 	}
+}
+
+.highlighter-rouge {
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	background-color: #f7f7f9 !important;
+	border: 1px solid #e1e1e8 !important;
+	padding: 4px 4px;
+	color: #666;
 }
