@@ -7,8 +7,8 @@
 			<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 		{% endif %}
 
-		{% assign used[ item.filter ] = 'true' %}
-		{{ used[ item.filter ] | inspect }}
+		{% assign used = item.filter %}
+		{{ used | inspect }}
 
 	{% endfor %}
 </ul>
