@@ -31,31 +31,29 @@ The table above is stored in the database as a JSON string below.
 {% include codeblock.html
 lang="JS"
 style="js"
-code="Code"
-%}
-
-{
-	\"p\":{
-		\"o\":{
-			\"uh\":1
+code="{
+	&quot;p&quot;:{
+		&quot;o&quot;:{
+			&quot;uh&quot;:1
 		}
 	},
-	\"c\":[
-		{\"p\":\"\"},
-		{\"p\":\"\"}
+	&quot;c&quot;:[
+		{&quot;p&quot;:&quot;&quot;},
+		{&quot;p&quot;:&quot;&quot;}
 	],
-	\"h\":[
-		{\"c\":\"A\"},
-		{\"c\":\"B\"}
+	&quot;h&quot;:[
+		{&quot;c&quot;:&quot;A&quot;},
+		{&quot;c&quot;:&quot;B&quot;}
 	],
-	\"b\":[
+	&quot;b&quot;:[
 		[
-			{\"c\":\"1\"},
-			{\"c\":\"some\"}
+			{&quot;c&quot;:&quot;1&quot;},
+			{&quot;c&quot;:&quot;some&quot;}
 		],
 		[
-			{\"c\":\"2\"},
-			{\"c\":\"thing\"}
+			{&quot;c&quot;:&quot;2&quot;},
+			{&quot;c&quot;:&quot;thing&quot;}
 		]
 	]
-}
+}"
+%}
