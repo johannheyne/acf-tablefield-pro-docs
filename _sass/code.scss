@@ -27,3 +27,27 @@ pre {
 code {
 	font-size: 1rem;
 }
+
+.code-block .pre-title {
+	display: block;
+	border: #E1E1E8 solid 1px;
+	margin: 0;
+	padding: 14px 20px;
+	position: relative;
+}
+
+.code-block .pre-title .fa {
+	width: 31px;
+	height: 31px;
+	line-height: 31px;
+	font-size: 14px;
+	text-align: center;
+	background: #F7F7F9;
+	border-radius: 100%;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	color: #708090;
+	display: none;
+}
