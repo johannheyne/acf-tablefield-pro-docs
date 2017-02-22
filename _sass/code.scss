@@ -5,18 +5,10 @@ code {
 	&[type]:before {
 		content: attr( type );
 		display: block;
-		background-color: rgb( 52, 58, 69 );
-		color: rgba( 255, 255, 255, 0.6 );
+		background-color: rgba( 266, 255, 255, 0.2 );
+		border-bottom: rgba( 0, 0, 0, 0.1 );
+		color: rgba( 0, 0, 0, 0.6 );
 		padding: 0.2rem 1rem;
-	}
-
-	&:before {
-		font-size: 13px;
-		text-transform: uppercase;
-		color: #cbccce;
-		position: absolute;
-		top: 20px;
-		right: 20px;
 	}
 }
 
