@@ -3,13 +3,13 @@
 	margin-top: $margin-vert;
 	margin-bottom: $margin-vert;
 	border-collapse: collapse;
-	font-size: 0.8rem;
 
 	border: 1px solid $color-grey-medium;
 
 	th, td {
 		padding: 6px 12px;
 		border: 1px solid $color-grey-medium;
+		font-size: 0.9rem;
 	}
 
 	th {
