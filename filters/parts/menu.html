@@ -1,4 +1,4 @@
-{% assign sorted_filters = site.filters | sort: 'version', 'first' %}
+{% assign sorted_filters = site.filters | sort: 'version', 'last' %}
 {{ sorted_filters | inspect }}
 <hl>
 {% assign grouped_filters = sorted_filters | group_by: 'filter' %}
