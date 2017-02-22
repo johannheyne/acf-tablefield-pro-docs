@@ -10,7 +10,11 @@
 		{{ item.name | jsonify }}<br>
 		{{ item.items[0].filter | jsonify }}<br>
 		{{ item.items[0].version | jsonify }}<br>
-		{{ item.items | size }}}<br>
+
+		{% assign index = item.items | size %}
+		{% assign index = index - 1 %}
+
+		{{ index | jsonify }}<br>
 		<br><br>
 			<!--<li {% if item.url == page.url%}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>-->
 
