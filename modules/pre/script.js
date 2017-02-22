@@ -5,15 +5,9 @@ jQuery( document ).ready( function( $ ) {
 
 		.delegate( '.pre-title', 'click', function() {
 
-			var that = $( this ),
-				btn = that.find( '.fa' ),
-				code = that.next();
+			var that = $( this );
 
-				btn.toggle();
-				code.toggle();
-		} )
-
-		.find( '.fa-angle-down' )
-			.toggle();
+				that.toggle( 'closed' );
+		} );
 
 });
