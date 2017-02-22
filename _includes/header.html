@@ -31,6 +31,7 @@
 					{% if item.title %}
 					{{page.collection | jsonify}}
 					{{item.topic | jsonify}}
+						<li {% if page.collection == item.topic %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>
