@@ -9,10 +9,22 @@ layout: page
 
 The table field data are stored as a single JSON string.
 
-| A    | B     |
-| :--- | :---- |
-| 1    | 2     |
-| 3    | 4     |
+<table>
+	<thead>
+		<th>A</td>
+		<th>B</td>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>some</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>thing</td>
+		</tr>
+	</tbody>
+</table>
 
 The table above results in a JSON string below.
 
@@ -36,11 +48,11 @@ code="{
 	"b":[
 		[
 			{"c":"1"},
-			{"c":"2"}
+			{"c":"some"}
 		],
 		[
-			{"c":"3"},
-			{"c":"4"}
+			{"c":"2"},
+			{"c":"thing"}
 		]
 	]
 }"
