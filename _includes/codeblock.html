@@ -1,11 +1,13 @@
 <div class="code-block">
 
+	{% if include.title %}
 	<h4 class="pre-title">
 		{{ include.title }}
 		<i class="fa fa-angle-down"></i>
 		<i class="fa fa-angle-up"></i>
 	</h4>
+	{% endif include.title %}
 
-<pre type="{{ include.type }}"><code class="language-{{ include.lang }}">{{ include.code }}
+<pre {% if include.type %}type="{{ include.type }}"{% endif %}><code class="language-{{ include.lang }}">{{ include.code }}
 </code></pre>
 </div>
