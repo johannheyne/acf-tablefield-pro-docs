@@ -25,10 +25,11 @@
 						<li {% if item.url == page.url or page.collection == item.menu %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
-
+{{page | inspect}}
 				{% assign sorted_topics = (site.topics | sort: 'title') %}
 				{% for item in sorted_topics %}
 					{% if item.title %}
+					{{item | inspect}}
 						<li {% if item.url == page.url or page.collection == item.collection %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
