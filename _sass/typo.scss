@@ -1,4 +1,13 @@
 body {
 	line-height: 1.8;
-	color: #52606d;
+	color: darken( $color-blue-dark, 10 );
+}
+
+a {
+	color: darken( $color-green, 10 );
+	transition: all 0.3s;
+
+	&:hover {
+		color: darken( $color-green, 20 );
+	}
 }

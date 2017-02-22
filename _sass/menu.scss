@@ -1,16 +1,17 @@
 .menu {
 
-	margin-left: 0;
-	padding: 0;
-	list-style-type: none;
+	//margin-left: 0;
+	//padding: 0;
+	list-style-type: disc;
 
 	li {
-		padding: 0.2rem 0;
+		padding-top: 0rem;
+		padding-bottom: 0rem;
 	}
 
 	a {
-		color: $color-white;
 		text-decoration: none;
+		font-size: 1rem;
 	}
 
 	.active a {

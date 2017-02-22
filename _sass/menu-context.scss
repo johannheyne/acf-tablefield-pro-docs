@@ -1,21 +1,17 @@
 .menu-context {
 
-	margin-left: 0;
-	padding: 0;
-	list-style-type: none;
+	list-style-type: disc;
 
 	li {
-		padding: 0.2rem 0;
+
 	}
 
 	a {
-		color: $color-blue;
 		text-decoration: none;
 		transition: all 0.3s;
 	}
 
 	li:hover a {
-		color: darken( $color-blue, 20 );
 		text-decoration: underline;
 	}
 }

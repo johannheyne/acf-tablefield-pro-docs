@@ -1,0 +1,18 @@
+<p>Pages</p>
+<ul class="menu">
+	{% assign sorted_pages = (site.pages | sort: 'order') %}
+	{% for item in sorted_pages %}
+		{% if item.title %}
+			<li {% if item.url == page.url or page.collection == item.menu %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
+		{% endif %}
+	{% endfor %}
+</ul>
+<p>Topics</p>
+<ul class="menu">
+	{% assign sorted_topics = (site.topics | sort: 'title') %}
+	{% for item in sorted_topics %}
+		{% if item.title %}
+			<li {% if page.collection == item.topic or page.topic and page.topic == item.topic %}class="active"{% endif %}><a href="{{ item.url, | absolute_url }}" >{{ item.title }}</a></li>
+		{% endif %}
+	{% endfor %}
+</ul>
