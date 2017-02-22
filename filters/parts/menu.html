@@ -1,6 +1,6 @@
 <ul class="menu-context margin-vert">
 	{% assign sorted_filters = (site.filters | sort: 'version') %}
-	{% assign used = "" | split: ',' %}
+	{% assign used = "data_defaults" | split: ',' %}
 	{{ used | inspect }}
 	{% for item in sorted_filters reverse %}
 
