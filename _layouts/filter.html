@@ -1,8 +1,8 @@
 {% include header.html %}
 
-			{% include filter_version_menu.html %}
+			<a href="{{site.urls.filters | absolute_url }}">Filter Overview</a><br>
 
-			<a href="{{site.urls.filters | absolute_url }}">Filter Overview</a>
+			{% include filter_version_menu.html %}
 
 			{{ content }}
 
