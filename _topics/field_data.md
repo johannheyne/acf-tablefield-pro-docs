@@ -9,7 +9,7 @@ layout: page
 
 The table field data are stored as a single JSON string.
 
-<table>
+<table class="sample-table">
 	<thead>
 		<th>A</th>
 		<th>B</th>
