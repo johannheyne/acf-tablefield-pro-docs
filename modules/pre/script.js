@@ -9,11 +9,11 @@ jQuery( document ).ready( function( $ ) {
 				btn = that.find( '.fa' ),
 				code = that.next();
 
-				btn.toogle();
-				code.toogle();
+				btn.toggle();
+				code.toggle();
 		} )
 
 		.find( '.fa-angle-down' )
-			.toogle();
+			.toggle();
 
 });
