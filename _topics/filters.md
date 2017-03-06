@@ -4,6 +4,6 @@ topic: filters
 layout: page
 ---
 
-<h1>Filters</h1>
+# Filters
 
 {% include topic_menu.html %}
