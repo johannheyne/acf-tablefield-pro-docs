@@ -1,8 +1,15 @@
 $color-black: rgb(0, 0, 0);
 $color-grey-light: rgb(230, 230, 230);
 $color-grey-medium: rgb(130, 130, 130);
-$color-blue: rgb(31, 120, 255);
 $color-white: rgb(255, 255, 255);
-$color-green: rgb(18, 207, 150);
+$color-blue: rgb( 75, 127, 204 );
+$color-green: rgb(75, 204, 162);
+$color-yellow: rgb(226, 195, 86);
+$color-red: rgb(204, 83, 75);
+
+$color-blue-light: transparentize( $color-blue, 0.8 );
+$color-green-light: transparentize( $color-green, 0.8 );
+$color-yellow-light: transparentize( $color-yellow, 0.8 );
+$color-red-light: transparentize( $color-red, 0.8 );
 
 $color-blue-dark: #52606d;

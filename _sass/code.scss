@@ -1,4 +1,7 @@
 pre {
+
+	position: relative;
+	padding: 0 !important;
 	margin-top: $margin-vert;
 	margin-bottom: $margin-vert;
 	background-color: transparentize( $color-blue-dark, 0.95 ) !important;
@@ -13,19 +16,27 @@ pre {
 	&[type]:before {
 		content: attr( type );
 		display: block;
-		margin-top: -1em;
-		margin-left: -1em;
-		margin-right: -1em;
-		margin-bottom: 1em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
 		background-color: transparentize( $color-blue-dark, 0.8 );
 		//border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
 		color: rgba( 255, 255, 255, 0.9 );
 		padding: 0.2rem 1rem;
 	}
+
+	&[type] code {
+		display: block;
+		margin-top: 2em;
+	}
 }
 
 code {
-	font-size: 1rem;
+	font-size: 0.9em !important;
+	width: 100%;
+	overflow: auto;
+	padding: 1em ;
 }
 
 .code-block {
@@ -39,6 +50,7 @@ code {
 	}
 
 	.pre-title {
+
 		display: block;
 		border: #e1e1e8 solid 1px;
 		margin: 0;

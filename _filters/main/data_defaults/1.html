@@ -8,6 +8,11 @@ version: 1
 
 {% include filter_title.html %}
 
+{% include messageblock.html
+type="warning"
+message="Avoid using this filter directly by a module. The reason is, that the data structure may change in future. Watch these [default data functions]()."
+%}
+
 {% include codeblock.html
 lang="JS"
 style="js"

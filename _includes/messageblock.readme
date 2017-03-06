@@ -1,0 +1,4 @@
+{% include messageblock.html
+type="primary,success,info,warning,danger"
+message=""
+%}

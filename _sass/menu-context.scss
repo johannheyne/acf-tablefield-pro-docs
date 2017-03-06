@@ -2,6 +2,10 @@
 
 	list-style-type: disc;
 
+	ul {
+		list-style-type: disc;
+	}
+
 	li {
 
 	}
@@ -11,7 +15,7 @@
 		transition: all 0.3s;
 	}
 
-	li:hover a {
+	li a:hover {
 		text-decoration: underline;
 	}
 }
