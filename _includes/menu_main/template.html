@@ -1,5 +1,5 @@
 <p>Pages</p>
-<ul class="menu">
+<ul class="menu_main">
 	{% assign sorted_pages = (site.pages | sort: 'order') %}
 	{% for item in sorted_pages %}
 		{% if item.title %}
@@ -8,7 +8,7 @@
 	{% endfor %}
 </ul>
 <p>Topics</p>
-<ul class="menu">
+<ul class="menu_main">
 	{% assign sorted_topics = (site.topics | sort: 'title') %}
 	{% for item in sorted_topics %}
 		{% if item.title %}
