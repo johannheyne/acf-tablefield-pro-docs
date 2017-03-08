@@ -10,7 +10,7 @@ layout: page
 
 ## Example table
 
-<table class="sample-table">
+<table class="sample_table">
 	<thead>
 		<th>A</th>
 		<th>B</th>
