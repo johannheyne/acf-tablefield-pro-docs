@@ -10,7 +10,7 @@ layout: page
 
 ## Objects
 
-{% include codeblock.html
+{% include codeblock/template.html
 lang="JS"
 style="js"
 code="ACFTableField.obj.document

@@ -33,6 +33,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+sass:
+  load_paths:
+    - _sass
+    - _includes/**/*
+
 
 
 collections:

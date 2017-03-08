@@ -1,4 +1,4 @@
-{% include messageblock.html
+{% include messageblock/template.html
 type="primary,success,info,warning,danger"
 message=""
 %}

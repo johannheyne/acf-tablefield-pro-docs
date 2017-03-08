@@ -1,4 +1,4 @@
-{% include codeblock.html
+{% include codeblock/template.html
 title=""
 lang=""
 style="js"

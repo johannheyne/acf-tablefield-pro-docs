@@ -10,7 +10,7 @@ layout: page
 
 ## Add a filter
 
-{% include codeblock.html
+{% include codeblock/template.html
 lang="JS"
 style="js"
 code="ACFTableField.core.add_filter( scope, filterslug, handler );"
@@ -18,7 +18,7 @@ code="ACFTableField.core.add_filter( scope, filterslug, handler );"
 
 ### Example of adding a filter in a module
 
-{% include codeblock.html
+{% include codeblock/template.html
 lang="JS"
 style="js"
 code="jQuery.noConflict();

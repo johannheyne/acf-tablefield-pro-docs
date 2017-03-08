@@ -29,7 +29,7 @@ layout: page
 
 A table fields data are stored as a single JSON string. The table above is stored in the database as the following JSON string…
 
-{% include codeblock.html
+{% include codeblock/template.html
 title=".json"
 style="js"
 code="{
@@ -63,7 +63,7 @@ code="{
 
 ## Table Parameter
 
-{% include codeblock.html
+{% include codeblock/template.html
 lang=".json"
 style="js"
 code="{
