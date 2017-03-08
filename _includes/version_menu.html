@@ -1,6 +1,7 @@
 <select onchange="if( this.options[this.selectedIndex].value != '' ) location.href=this.options[this.selectedIndex].value;">
-    {% for item in site.filters %}
-		{% if page.filter == item.filter %}
+
+	{% for item in site[ include.collection ] %}
+		{% if page.slug == item.slug %}
 			<option {% if page.version == item.version%}selected{% endif %} value="{{ item.url, | absolute_url }}" >v{{ item.version }}</option>
 		{% endif %}
 	{% endfor %}

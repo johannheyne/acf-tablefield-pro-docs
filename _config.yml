@@ -44,6 +44,10 @@ collections:
         output: true,
         permalink: topics/:path/
 
+    methodes:
+        output: true,
+        permalink: methodes/:path/
+
 
 urls:
     filters: filters/

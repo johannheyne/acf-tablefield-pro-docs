@@ -1,7 +1,7 @@
 {% if site[ page.topic ] %}
 
 	{% assign sorted = site[ page.topic ] | sort: 'version' %}
-	{% assign grouped = sorted | group_by: 'filter' %}
+	{% assign grouped = sorted | group_by: 'slug' %}
 
 	{% assign scope = false %}
 
@@ -30,7 +30,7 @@
 		{% endif %}
 
 		<li {% if item.items[index].url == page.url%}class="active"{% endif %}>
-			<a href="{{ item.items[index].url | absolute_url }}" >{{ item.items[index].filter }}</a>
+			<a href="{{ item.items[index].url | absolute_url }}" >{{ item.items[index].slug }}</a>
 		</li>
 
 	{% endfor %}
