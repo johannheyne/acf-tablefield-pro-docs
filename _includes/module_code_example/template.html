@@ -1,0 +1,26 @@
+{% assign code = '' %}
+{% capture code %}
+jQuery.noConflict();
+jQuery( document ).ready( function( $ ) {
+
+	function ACFTableFieldMyModule() {
+
+		var t = this;
+
+		{{ include.code | indent_tab: 2 | strip }}
+
+	};
+
+	ACFTableField.mymodule = new ACFTableFieldMyModule();
+
+});
+{% endcapture %}
+
+{% capture code %}{{ code }}{% endcapture %}
+
+{% include codeblock/template.html
+title="Example"
+lang="JS"
+style="js"
+code=code
+%}

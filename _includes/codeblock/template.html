@@ -8,6 +8,6 @@
 	</h4>
 	{% endif include.title %}
 
-<pre {% if include.lang %}type="{{ include.lang }}"{% endif %}><code class="language-{{ include.style }}">{{ include.code }}
+<pre {% if include.lang %}type="{{ include.lang }}"{% endif %}><code class="language-{{ include.style }}">{{ include.code | strip }}
 </code></pre>
 </div>
