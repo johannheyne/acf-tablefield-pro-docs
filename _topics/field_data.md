@@ -6,7 +6,7 @@ layout: page
 
 # Field Data
 
-{% include topic_menu.html %}
+{% include menu_topic/template.html %}
 
 ## Example table
 

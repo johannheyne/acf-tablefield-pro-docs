@@ -6,7 +6,7 @@ layout: page
 
 # Filters
 
-{% include topic_menu.html %}
+{% include menu_topic/template.html %}
 
 ## Add a filter
 
