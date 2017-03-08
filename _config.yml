@@ -35,7 +35,7 @@ exclude:
 
 sass:
   load_paths:
-    - _sass
+    - _sass/**/*
     - _includes/**/*
 
 
