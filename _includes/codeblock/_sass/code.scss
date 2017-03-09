@@ -30,10 +30,13 @@ pre {
 		display: block;
 		margin-top: 2em;
 	}
+
+	code {
+		display: block;
+	}
 }
 
 code {
-	display: block;
 	font-size: 0.9em !important;
 	width: 100%;
 	overflow: auto;
