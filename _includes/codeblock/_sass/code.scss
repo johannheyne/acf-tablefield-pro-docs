@@ -35,13 +35,14 @@ pre {
 		display: block;
 		width: 100%;
 		overflow: auto;
+		padding: 1em !important;
 	}
 }
 
 code {
 	display: inline-block;
 	font-size: 0.9em !important;
-	padding: 1em;
+	padding: 0 0.5em !important;
 }
 
 .code-block {
