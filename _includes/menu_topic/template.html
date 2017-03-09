@@ -3,7 +3,7 @@
 	{% assign sorted = site[ page.topic ] | sort: 'version' %}
 	{% assign grouped = sorted | group_by: 'slug' %}
 
-	{% assign scope = false %}
+	{% assign group = false %}
 
 <ul class="menu_topic margin-vert">
 
@@ -16,16 +16,16 @@
 		{% assign path = item.items[index].url | remove_first: "/" | split: '/' %}
 		{% assign subfolder = path[1] %}
 
-		{% if scope != subfolder %}
+		{% if group != subfolder %}
 
-			{% if scope %}
+			{% if group %}
 				</ul>
 			{% endif %}
 
 			<li>{{subfolder}}
 				<ul>
 
-			{% capture scope %}{{subfolder}}{% endcapture %}
+			{% capture group %}{{subfolder}}{% endcapture %}
 
 		{% endif %}
 

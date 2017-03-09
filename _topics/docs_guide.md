@@ -53,7 +53,7 @@ code=code
 ---
 title: <title>
 layout: <layout>
-script: <group>
+group: <group>
 slug: <item-slug>
 version: <version>
 ---
