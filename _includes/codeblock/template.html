@@ -8,5 +8,5 @@
 	</h4>
 	{% endif include.title %}
 
-	<pre {% if include.lang %}type="{{ include.lang }}"{% endif %}><code class="language-{{ include.style }}">{{ include.code | strip | escape }}</code></pre>
+	<pre {% if include.lang %}type="{{ include.lang }}"{% endif %}><code class="language-{{ include.style }}">{{ include.code | replace: '0/0', '%' | strip | escape }}</code></pre>
 </div>
