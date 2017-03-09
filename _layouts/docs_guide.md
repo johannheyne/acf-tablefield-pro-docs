@@ -6,6 +6,14 @@
 
 			{% include page_title/template.html %}
 
+			{% include codeblock/template.html
+				lang="JS"
+				style="js"
+				code=page.code
+			%}
+
+			{% include parameters/template.html %}
+
 			{{ content }}
 
 {% include footer/template.html %}

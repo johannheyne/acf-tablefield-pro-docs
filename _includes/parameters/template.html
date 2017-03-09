@@ -1,0 +1,47 @@
+<h2>Parameters</h2>
+
+{% if page.parameters != nil %}
+
+	<ul class="parameters">
+	{% for parameter in page.parameters %}
+
+			<li><strong>{{ parameter.name }}</strong>
+
+				<ul>
+
+					{% if parameter.optional %}
+						<li><span class="parameters-label">Optional:</span> yes</li>
+					{% endif %}
+
+					{% if parameter.type %}
+						<li><span class="parameters-label">Type:</span> {{ parameter.type }}</li>
+					{% endif %}
+
+					{% if parameter.default %}
+						<li><span class="parameters-label">Default:</span> {{ parameter.default }}</li>
+					{% endif %}
+
+					{% if parameter.options %}
+						<li><span class="parameters-label">Options:</span> {{ parameter.options | join: ', ' }}</li>
+					{% endif %}
+
+					{% if parameter.message %}
+						<li>
+							{% include messageinline/template.html
+								type=parameter.message.type
+								text=parameter.message.message
+							%}
+						</li>
+					{% endif %}
+
+					{% if parameter.description %}
+						<li>{{ parameter.description }}</li>
+					{% endif %}
+
+				</ul>
+			</li>
+
+	{% endfor %}
+	</ul>
+
+{% endif page.parameters != nil %}

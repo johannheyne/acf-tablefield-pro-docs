@@ -1,0 +1,20 @@
+–––
+parameters: [
+	{
+		"name": "",
+		"optional": "y",
+		"type": "",
+		"default": "",
+		"options": [ "one" ],
+		"description": "Hello World",
+		"message": {
+			"type": "",
+			"text": "Hello World"
+		}
+	},
+	{
+		"name": "",
+		"type": "",
+	}
+]
+–––
