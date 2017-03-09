@@ -12,8 +12,7 @@ style="js"
 code="ACFTableField.core.add_filter( scope, filterslug, handler );"
 %}
 
-{% include module_code_example/template.html
-code="
+{% capture code %}
 t.init = function( p ) {
 
 	ACFTableField.core.add_filter( 'main', 'data_defaults', t.add_default_data );
@@ -26,5 +25,8 @@ t.add_default_data = function( default_data ) {
 
 	return default_data;
 }
-"
+{% endcapture code %}
+
+{% include module_code_example/template.html
+code=code
 %}
