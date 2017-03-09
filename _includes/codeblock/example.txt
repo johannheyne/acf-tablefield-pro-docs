@@ -1,6 +1,10 @@
+{% capture code %}
+// your code
+{% endcapture %}
+
 {% include codeblock/template.html
-title=""
-lang=""
+title="Example"
+lang="JS"
 style="js"
-code=""
+code=code
 %}
