@@ -1,0 +1,34 @@
+.message-inline {
+
+	display: inline-block;
+	border: 0 solid transparent;
+	padding: 1em 2em;
+	border-left-width: 0.3rem;
+	border-style: solid;
+	background-color: $color-grey-light;
+	border-left-color: $color-grey-medium;
+	vertical-align: top;
+	margin: 0.3em 0;
+
+	&.primary {
+		background-color: $color-blue;
+		color: $color-white;
+		border-left-color: $color-blue;
+	}
+	&.success {
+		background-color: $color-green-light;
+		border-left-color: $color-green;
+	}
+	&.info {
+		background-color: $color-blue-light;
+		border-left-color: $color-blue;
+	}
+	&.warning {
+		background-color: $color-yellow-light;
+		border-left-color: $color-yellow;
+	}
+	&.danger {
+		background-color: $color-red-light;
+		border-left-color: $color-red;
+	}
+}

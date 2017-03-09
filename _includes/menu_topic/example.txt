@@ -1,0 +1,3 @@
+Parameter "topic" is optional, default page.collection.
+
+{% include menu_topic/template.html topic="" %}
