@@ -53,6 +53,10 @@ collections:
         output: true,
         permalink: methodes/:path/
 
+    docs_guide:
+        output: true,
+        permalink: docs_guide/:path/
+
 
 urls:
     filters: filters/

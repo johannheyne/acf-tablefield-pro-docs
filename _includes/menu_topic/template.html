@@ -1,6 +1,14 @@
-{% if site[ page.topic ] %}
+{% assign collection = page.topic %}
 
-	{% assign sorted = site[ page.topic ] | sort: 'version' %}
+{% if include.topic != nil %}
+
+	{% capture collection %}{{ include.topic }}{% endcapture %}
+
+{% endif %}
+
+{% if site[ collection ] %}
+
+	{% assign sorted = site[ collection ] | sort: 'version' %}
 	{% assign grouped = sorted | group_by: 'slug' %}
 
 	{% assign group = false %}

@@ -2,11 +2,11 @@
 
 	{% if include.title %}
 	<h4 class="pre-title">
-		{{ include.title }}
+		{{ include.title | escape }}
 		<i class="fa fa-angle-down"></i>
 		<i class="fa fa-angle-up"></i>
 	</h4>
 	{% endif include.title %}
 
-	<pre {% if include.lang %}type="{{ include.lang }}"{% endif %}><code class="language-{{ include.style }}">{{ include.code | replace: '0/0', '%' | strip | escape }}</code></pre>
+	<pre {% if include.lang %}type="{{ include.lang | escape }}"{% endif %}><code class="language-{{ include.style }}">{{ include.code | replace: '0/0', '%' | strip | escape }}</code></pre>
 </div>
