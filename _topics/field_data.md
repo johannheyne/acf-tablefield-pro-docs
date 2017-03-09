@@ -4,8 +4,6 @@ topic: fields_data
 layout: page
 ---
 
-# Field Data
-
 {% include menu_topic/template.html %}
 
 ## Example table

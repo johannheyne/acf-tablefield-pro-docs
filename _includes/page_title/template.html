@@ -1,1 +1,19 @@
-<h1>{{page.slug}}</h1>
+{% assign title = page.title %}
+
+{% if page.collection == "methodes" %}
+
+	{% capture title %}
+		{{page.slug}}
+	{% endcapture %}
+
+{% endif %}
+
+{% if page.collection == "filters" %}
+
+	{% capture title %}
+		{{page.slug}}
+	{% endcapture %}
+
+{% endif %}
+
+<h1>{{title}}</h1>

@@ -4,8 +4,6 @@ topic: globals
 layout: page
 ---
 
-# Globals
-
 {% include menu_topic/template.html %}
 
 ## Objects

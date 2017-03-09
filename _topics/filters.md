@@ -4,8 +4,6 @@ topic: filters
 layout: page
 ---
 
-# Filters
-
 {% include menu_topic/template.html %}
 
 ## Add a filter
