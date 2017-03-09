@@ -27,50 +27,56 @@ layout: page
 
 A table fields data are stored as a single JSON string. The table above is stored in the database as the following JSON string…
 
-{% include codeblock/template.html
-title=".json"
-style="js"
-code="{
-	&quot;p&quot;:{
-		&quot;o&quot;:{
-			&quot;uh&quot;:1
+{% capture code %}
+{
+	"p":{
+		"o":{
+			"uh":1
 		}
 	},
-	&quot;c&quot;:[
-		{&quot;p&quot;:&quot;&quot;},
-		{&quot;p&quot;:&quot;&quot;}
+	"c":[
+		{"p":""},
+		{"p":""}
 	],
-	&quot;h&quot;:[
-		{&quot;c&quot;:&quot;A&quot;},
-		{&quot;c&quot;:&quot;B&quot;}
+	"h":[
+		{"c":"A"},
+		{"c":"B"}
 	],
-	&quot;b&quot;:[
+	"b":[
 		[
-			{&quot;c&quot;:&quot;1&quot;},
-			{&quot;c&quot;:&quot;some&quot;}
+			{"c":"1"},
+			{"c":"some"}
 		],
 		[
-			{&quot;c&quot;:&quot;2&quot;},
-			{&quot;c&quot;:&quot;thing&quot;}
+			{"c":"2"},
+			{"c":"thing"}
 		]
 	]
-}"
-%}
-
-
-
-## Table Parameter
+}
+{% endcapture %}
 
 {% include codeblock/template.html
 lang=".json"
 style="js"
-code="{
-	&quot;p&quot;:{
-		&quot;o&quot;:{
-			&quot;uh&quot;:1
+code=code
+%}
+
+## Table Parameter
+
+{% capture code %}
+{
+	"p":{
+		"o":{
+			"uh":1
 		}
 	}
-}"
+}
+{% endcapture %}
+
+{% include codeblock/template.html
+lang=".json"
+style="js"
+code=code
 %}
 
 The object `"p"` stands for parameters of this table. This parameter object has an object `"o"` which stands for options.
