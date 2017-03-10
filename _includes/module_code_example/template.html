@@ -1,4 +1,5 @@
 {% assign code = '' %}
+
 {% capture code %}
 jQuery.noConflict();
 jQuery( document ).ready( function( $ ) {
@@ -16,11 +17,11 @@ jQuery( document ).ready( function( $ ) {
 });
 {% endcapture %}
 
-{% capture code %}{{ code }}{% endcapture %}
+{% capture code %}{{ code | strip }}{% endcapture %}
 
 {% include codeblock/template.html
-title="Example"
-lang="JS"
-style="js"
-code=code
+	title="Example"
+	lang="JS"
+	style="js"
+	code=code
 %}
