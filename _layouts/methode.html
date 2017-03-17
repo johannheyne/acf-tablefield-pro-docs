@@ -6,15 +6,19 @@
 
 			{% include page_title/template.html %}
 
-			{% include codeblock/template.html
-				lang="JS"
-				style="js"
-				code=page.code
-			%}
+			{% if page.code != "" %}
+				{% include codeblock/template.html
+					lang="JS"
+					style="js"
+					code=page.code
+				%}
+			{% endif %}
 
-			{% include module_code_example/template.html
-				code=page.example
-			%}
+			{% if page.example != "" %}
+				{% include module_code_example/template.html
+					code=page.example
+					%}
+			{% endif %}
 
 			{{ content }}
 

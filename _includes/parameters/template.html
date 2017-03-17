@@ -1,9 +1,9 @@
-{% if page.parameters != nil %}
+{% if include.parameters != nil %}
 
 <h2>Parameters</h2>
 
 <ul class="parameters">
-{% for parameter in page.parameters %}
+{% for parameter in include.parameters %}
 
 		<li><strong>{{ parameter.name }}</strong>
 
@@ -35,7 +35,7 @@
 				{% endif %}
 
 				{% if parameter.description %}
-					<li>{{ parameter.description }}</li>
+					<li>{{ parameter.description | markdownify }}</li>
 				{% endif %}
 
 			</ul>

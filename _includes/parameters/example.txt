@@ -18,3 +18,10 @@ parameters: [
 	}
 ]
 –––
+
+
+
+
+{% include codeblock/parameters.html
+	parameters=page.parameters
+%}

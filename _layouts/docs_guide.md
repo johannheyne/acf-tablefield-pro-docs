@@ -12,7 +12,7 @@
 				code=page.code
 			%}
 
-			{% include parameters/template.html %}
+			{% include parameters/template.html parameters=page.parameters %}
 
 			{{ content }}
 
