@@ -6,21 +6,59 @@
 
 			{% include page_title/template.html %}
 
+
+
+			{{ page.intro }}
+
+
+			{{ "## Button" | markdownify }}
+
 			{% if page.code != "" %}
 				{% include codeblock/template.html
-					lang="JS"
-					style="js"
+					lang="HTML"
+					style="html"
 					code=page.code
 				%}
 			{% endif %}
 
+
+
 			{% include parameters/template.html parameters=page.parameters %}
+
+
 
 			{% if page.example != "" %}
 				{% include module_code_example/template.html
 					code=page.example
 					%}
 			{% endif %}
+
+
+
+			{{ content }}
+
+
+
+			{% for filter in site.filters %}
+
+				{% if filter.group == page.slug %}
+
+					{{ filter.slug | prepend: "## Filter: " | markdownify }}
+
+					{% if filter.code != "" %}
+						{% include codeblock/template.html
+							lang="JS"
+							style="js"
+							code=filter.code
+						%}
+					{% endif %}
+
+					{{ filter.content }}
+
+				{% endif %}
+
+			{% endfor %}
+
 
 
 			{% if site[ 'filters' ] %}
@@ -63,8 +101,5 @@
 			{% endif %}
 
 
-
-
-			{{ content }}
 
 {% include footer/template.html %}
