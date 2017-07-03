@@ -1,9 +1,17 @@
 {% assign title = page.title %}
 
+{% if page.collection == "modules" %}
+
+	{% capture title %}
+		Module: "{{page.slug}}"
+	{% endcapture %}
+
+{% endif %}
+
 {% if page.collection == "methodes" %}
 
 	{% capture title %}
-		{{page.slug}}
+		Methode: "{{page.slug}}"
 	{% endcapture %}
 
 {% endif %}
@@ -11,7 +19,7 @@
 {% if page.collection == "filters" %}
 
 	{% capture title %}
-		{{page.slug}}
+		Filter: "{{page.slug}}"
 	{% endcapture %}
 
 {% endif %}
