@@ -4,15 +4,9 @@
 
 		{{ filter.slug | prepend: "## Filter: " | markdownify }}
 
-		{% if filter.code != "" %}
-			{% include codeblock/template.html
-				lang="JS"
-				style="js"
-				code=filter.code
-			%}
-		{% endif %}
-
-		{{ filter.content }}
+		{% include contentblocks/template.html
+			contentblocks=filter.contentblocks
+		%}
 
 	{% endif %}
 

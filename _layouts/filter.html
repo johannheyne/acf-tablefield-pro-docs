@@ -10,7 +10,9 @@
 
 	{% if page.contentblocks  %}
 
-		{% include contentblocks/template.html %}
+		{% include contentblocks/template.html
+			contentblocks=page.contentblocks
+		%}
 
 	{% endif %}
 
