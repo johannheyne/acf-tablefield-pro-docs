@@ -12,6 +12,12 @@
 
 	{% endif %}
 
+	{% if block.blocktype == "codeblock" %}
+
+		{% include contentblocks/blocks/codeblock.html %}
+
+	{% endif %}
+
 	{% if block.blocktype == "parameters" %}
 
 		{% include contentblocks/blocks/parameters.html %}
@@ -39,6 +45,12 @@
 	{% if block.blocktype == "heading" %}
 
 		{% include contentblocks/blocks/heading.html %}
+
+	{% endif %}
+
+	{% if block.blocktype == "messageblock" %}
+
+		{% include contentblocks/blocks/messageblock.html %}
 
 	{% endif %}
 
