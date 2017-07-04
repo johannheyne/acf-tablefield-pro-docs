@@ -55,4 +55,16 @@
 
 	{% endif %}
 
+	{% if block.blocktype == "menu_topic" %}
+
+		{% include menu_topic/template.html %}
+
+	{% endif %}
+
+	{% if block.blocktype == "table" %}
+
+		{% include contentblocks/blocks/table.html %}
+
+	{% endif %}
+
 {% endfor %}

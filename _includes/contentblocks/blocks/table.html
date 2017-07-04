@@ -1,0 +1,32 @@
+{% assign is_head = "true" %}
+
+<table class="table">
+{% for row in block.data %}
+
+	{% if is_head == "true" %}<thead>{% endif %}
+	{% if is_head == "false" %}<tbody>{% endif %}
+
+	<tr>
+
+		{% for cell in row %}
+
+			{% if is_head == "false" %}<td>{% endif %}
+			{% if is_head == "true" %}<th>{% endif %}
+
+			{{ cell }}
+
+			{% if is_head == "false" %}</td>{% endif %}
+			{% if is_head == "true" %}</th>{% endif %}
+
+		{% endfor %}
+
+	</tr>
+
+	{% if is_head == "false" %}</tbody>{% endif %}
+	{% if is_head == "true" %}
+		</thead>
+		{% assign is_head = "false" %}
+	{% endif %}
+
+{% endfor %}
+</table>
