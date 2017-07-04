@@ -10,5 +10,6 @@
 	{% endif include.title %}
 
 	<pre {% if include.lang %}type="{{ include.lang | escape }}"{% endif %}><code class="language-{{ include.style }}">{{ include.code | replace: '0/0', '%' | strip | escape }}</code></pre>
+
 </div>
 {% endif %}
