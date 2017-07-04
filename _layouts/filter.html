@@ -1,19 +1,19 @@
 {% include header/template.html %}
 
-			<a href="{{site.urls.topics | absolute_url }}{{page.collection}}">« back to overview</a><br><br>
+	<a href="{{site.urls.topics | absolute_url }}{{page.collection}}">« back to overview</a><br><br>
 
-			{% include menu_version/template.html collection=page.collection %}
+	{% include menu_version/template.html collection=page.collection %}
 
-			{% include page_title/template.html %}
+	{% include page_title/template.html %}
 
-			{% if page.code != "" %}
-				{% include codeblock/template.html
-					lang="JS"
-					style="js"
-					code=page.code
-				%}
-			{% endif %}
+	<!-- CONTENTBLOCKS -->
 
-			{{ content }}
+	{% if page.contentblocks  %}
+
+		{% include contentblocks/template.html %}
+
+	{% endif %}
+
+	{{ content }}
 
 {% include footer/template.html %}
