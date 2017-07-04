@@ -6,100 +6,12 @@
 
 			{% include page_title/template.html %}
 
+			<!-- CONTENTBLOCKS -->
 
+			{% if page.contentblocks  %}
 
-			{{ page.intro }}
-
-
-			{{ "## Button" | markdownify }}
-
-			{% if page.code != "" %}
-				{% include codeblock/template.html
-					lang="HTML"
-					style="html"
-					code=page.code
-				%}
-			{% endif %}
-
-
-
-			{% include parameters/template.html parameters=page.parameters %}
-
-
-
-			{% if page.example != "" %}
-				{% include module_code_example/template.html
-					code=page.example
-					%}
-			{% endif %}
-
-
-
-			{{ content }}
-
-
-
-			{% for filter in site.filters %}
-
-				{% if filter.group == page.slug %}
-
-					{{ filter.slug | prepend: "## Filter: " | markdownify }}
-
-					{% if filter.code != "" %}
-						{% include codeblock/template.html
-							lang="JS"
-							style="js"
-							code=filter.code
-						%}
-					{% endif %}
-
-					{{ filter.content }}
-
-				{% endif %}
-
-			{% endfor %}
-
-
-
-			{% if site[ 'filters' ] %}
-
-				{% assign sorted = site[ 'filters' ] | sort: 'order' %}
-				{% assign grouped = sorted | group_by: 'slug' %}
-
-				{% assign group = false %}
-
-				{% for item in grouped %}
-
-					{% assign index = item.items | size %}
-					{% assign index = index | minus:1 %}
-
-					{% assign path = item.items[index].url | remove_first: "/" | split: '/' %}
-					{% assign subfolder = path[1] %}
-
-					{% if subfolder == 'overlay' %}
-
-						{% if group == false %}
-							{% assign group = true %}
-
-							{{ "## Filters" | markdownify }}
-
-							<ul class="menu_topic margin-vert">
-						{% endif %}
-
-						<li {% if item.items[index].url == page.url%}class="active"{% endif %}>
-							<a href="{{ item.items[index].url | absolute_url }}" >{{ item.items[index].slug }}</a>
-						</li>
-
-					{% endif %}
-
-				{% endfor %}
-
-				{% if group %}
-					</ul>
-				{% endif %}
+				{% include contentblocks/template.html %}
 
 			{% endif %}
-
-
 
 {% include footer/template.html %}
