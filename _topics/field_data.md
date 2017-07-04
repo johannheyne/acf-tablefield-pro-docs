@@ -2,87 +2,101 @@
 title: Field Data
 topic: fields_data
 layout: page
----
 
-{% include menu_topic/template.html %}
-
-## Example table
-
-<table class="sample_table">
-	<thead>
-		<th>A</th>
-		<th>B</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td>some</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>thing</td>
-		</tr>
-	</tbody>
-</table>
-
-A table fields data are stored as a single JSON string. The table above is stored in the database as the following JSON string…
-
-{% capture code %}
-{
-	"p":{
-		"o":{
-			"uh":1
-		}
+contentblocks: [
+	{
+		"blocktype": "heading",
+		"level": "##",
+		"text": "Example table",
 	},
-	"c":[
-		{"p":""},
-		{"p":""}
-	],
-	"h":[
-		{"c":"A"},
-		{"c":"B"}
-	],
-	"b":[
-		[
-			{"c":"1"},
-			{"c":"some"}
+	{
+		"blocktype": "html",
+		"content": "<table class=\"sample_table\">
+			<thead>
+				<th>A</th>
+				<th>B</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>some</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>thing</td>
+				</tr>
+			</tbody>
+		</table>
+
+		A table fields data are stored as a single JSON string. The table above is stored in the database as the following JSON string…
+		",
+	},
+	{
+		"blocktype": "codeblock",
+		"lang": ".json",
+		"style": "js",
+		"code": "{
+		\n	\"p\":{
+		\n		\"o\":{
+		\n			\"uh\":1
+		\n		}
+		\n	},
+		\n	\"c\":[
+		\n		{\"p\":\"\"},
+		\n		{\"p\":\"\"}
+		\n	],
+		\n	\"h\":[
+		\n		{\"c\":\"A\"},
+		\n		{\"c\":\"B\"}
+		\n	],
+		\n	\"b\":[
+		\n		[
+		\n			{\"c\":\"1\"},
+		\n			{\"c\":\"some\"}
+		\n		],
+		\n		[
+		\n			{\"c\":\"2\"},
+		\n			{\"c\":\"thing\"}
+		\n		]
+		\n	]
+		\n}",
+	},
+	{
+		"blocktype": "heading",
+		"level": "##",
+		"text": "Table Parameter",
+	},
+	{
+		"blocktype": "codeblock",
+		"lang": ".json",
+		"style": "js",
+		"code": "{
+		\n	\"p\":{
+		\n		\"o\":{
+		\n			\"uh\":1
+		\n		}
+		\n	}
+		\n}",
+	},
+	{
+		"blocktype": "html",
+		"content": "The object <code>\"p\"</code> stands for parameters of this table. This parameter object has an object <code>\"o\"</code> which stands for options.",
+	},
+	{
+		"blocktype": "heading",
+		"level": "##",
+		"text": "Table Options",
+	},
+	{
+		"blocktype": "table",
+		"data": [
+			[
+				"Name", "Type", "Decription"
+			],
+			[
+				"uh", "boolean", "Use header "
+			]
 		],
-		[
-			{"c":"2"},
-			{"c":"thing"}
-		]
-	]
-}
-{% endcapture %}
-
-{% include codeblock/template.html
-lang=".json"
-style="js"
-code=code
-%}
-
-## Table Parameter
-
-{% capture code %}
-{
-	"p":{
-		"o":{
-			"uh":1
-		}
-	}
-}
-{% endcapture %}
-
-{% include codeblock/template.html
-lang=".json"
-style="js"
-code=code
-%}
-
-The object `"p"` stands for parameters of this table. This parameter object has an object `"o"` which stands for options.
-
-### Table Options
-
-| Name           | Type           | Decription     |
-| :------------- | :------------- | :------------- |
-| uh             | boolean        | Use header     |
+	},
+]
+---

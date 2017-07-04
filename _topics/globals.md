@@ -2,16 +2,21 @@
 title: Globals
 topic: globals
 layout: page
+
+contentblocks: [
+	{
+		"blocktype": "heading",
+		"level": "##",
+		"text": "Objects",
+	},
+	{
+		"blocktype": "codeblock",
+		"lang": "JS",
+		"style": "js",
+		"code": "ACFTableField.obj.document
+		\nACFTableField.obj.html
+		\nACFTableField.obj.body"
+	},
+]
+
 ---
-
-{% include menu_topic/template.html %}
-
-## Objects
-
-{% include codeblock/template.html
-lang="JS"
-style="js"
-code="ACFTableField.obj.document
-ACFTableField.obj.html
-ACFTableField.obj.body"
-%}

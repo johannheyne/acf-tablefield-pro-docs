@@ -2,6 +2,10 @@
 title: Methodes
 topic: methodes
 layout: page
----
 
-{% include menu_topic/template.html %}
+contentblocks: [
+	{
+		"blocktype": "menu_topic",
+	},
+]
+---
