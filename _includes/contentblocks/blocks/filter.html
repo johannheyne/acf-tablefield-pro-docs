@@ -1,0 +1,19 @@
+{% for filter in site.filters %}
+
+	{% if filter.group == block.search.module %}
+
+		{{ filter.slug | prepend: "## Filter: " | markdownify }}
+
+		{% if filter.code != "" %}
+			{% include codeblock/template.html
+				lang="JS"
+				style="js"
+				code=filter.code
+			%}
+		{% endif %}
+
+		{{ filter.content }}
+
+	{% endif %}
+
+{% endfor %}

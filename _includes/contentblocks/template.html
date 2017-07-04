@@ -1,0 +1,45 @@
+{% for block in page.contentblocks %}
+
+	{% if block.blocktype == "html" %}
+
+		{% include contentblocks/blocks/html.html %}
+
+	{% endif %}
+
+	{% if block.blocktype == "codeblock_module_example" %}
+
+		{% include contentblocks/blocks/codeblock_module_example.html %}
+
+	{% endif %}
+
+	{% if block.blocktype == "parameters" %}
+
+		{% include contentblocks/blocks/parameters.html %}
+
+	{% endif %}
+
+	{% if block.blocktype == "filter" %}
+
+		{% include contentblocks/blocks/filter.html %}
+
+	{% endif %}
+
+	{% if block.blocktype == "filter_list" %}
+
+		{% include contentblocks/blocks/filter_list.html %}
+
+	{% endif %}
+
+	{% if block.blocktype == "page_content" %}
+
+		{% include contentblocks/blocks/page_content.html %}
+
+	{% endif %}
+
+	{% if block.blocktype == "heading" %}
+
+		{% include contentblocks/blocks/heading.html %}
+
+	{% endif %}
+
+{% endfor %}
