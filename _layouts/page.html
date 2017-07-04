@@ -2,6 +2,16 @@
 
 	{% include page_title/template.html %}
 
+	<!-- CONTENTBLOCKS -->
+
+	{% if page.contentblocks  %}
+
+		{% include contentblocks/template.html
+			contentblocks=page.contentblocks
+		%}
+
+	{% endif %}
+
 	{{ content }}
 
 {% include footer/template.html %}
