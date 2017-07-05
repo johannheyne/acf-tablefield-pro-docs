@@ -6,18 +6,14 @@
 
 			{% include page_title/template.html %}
 
-			{% if page.code != "" %}
-				{% include codeblock/template.html
-					lang="JS"
-					style="js"
-					code=page.code
-				%}
-			{% endif %}
+			<!-- CONTENTBLOCKS -->
 
-			{% if page.example != "" %}
-				{% include module_code_example/template.html
-					code=page.example
-					%}
+			{% if page.contentblocks  %}
+
+				{% include contentblocks/template.html
+					contentblocks=page.contentblocks
+				%}
+
 			{% endif %}
 
 			{{ content }}
