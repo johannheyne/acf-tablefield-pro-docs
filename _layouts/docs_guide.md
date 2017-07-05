@@ -6,13 +6,23 @@
 
 			{% include page_title/template.html %}
 
-			{% include codeblock/template.html
+			<!--{% include codeblock/template.html
 				lang="JS"
 				style="js"
 				code=page.code
 			%}
 
-			{% include parameters/template.html parameters=page.parameters %}
+			{% include parameters/template.html parameters=page.parameters %}-->
+
+			<!-- CONTENTBLOCKS -->
+
+			{% if page.contentblocks  %}
+
+				{% include contentblocks/template.html
+					contentblocks=page.contentblocks
+				%}
+
+			{% endif %}
 
 			{{ content }}
 
