@@ -17,30 +17,33 @@
 
 	{% for item in grouped %}
 
-
 		{% assign index = item.items | size %}
 		{% assign index = index | minus:1 %}
 
 		{% assign path = item.items[index].url | remove_first: "/" | split: '/' %}
 		{% assign subfolder = path[1] %}
 
-		{% if group != subfolder %}
+		{% if path[2] != "_kickstart" %}
 
-			{% if group %}
-					</ul>
-				</li>
+			{% if group != subfolder %}
+
+				{% if group %}
+						</ul>
+					</li>
+				{% endif %}
+
+				<li>{{subfolder}}
+					<ul>
+
+				{% capture group %}{{subfolder}}{% endcapture %}
+
 			{% endif %}
 
-			<li>{{subfolder}}
-				<ul>
 
-			{% capture group %}{{subfolder}}{% endcapture %}
-
+			<li {% if item.items[index].url == page.url%}class="active"{% endif %}>
+				<a href="{{ item.items[index].url | absolute_url }}" >{{ item.items[index].slug }}</a>
+			</li>
 		{% endif %}
-
-		<li {% if item.items[index].url == page.url%}class="active"{% endif %}>
-			<a href="{{ item.items[index].url | absolute_url }}" >{{ item.items[index].slug }}</a>
-		</li>
 
 	{% endfor %}
 
