@@ -80,7 +80,7 @@ contentblocks: [
 	},
 	{
 		"blocktype": "html",
-		"content": "The object <code>\"p\"</code> stands for parameters of this table. This parameter object has an object <code>\"o\"</code> which stands for options.",
+		"content": "The object `\"p\"` stands for parameters of this table. This parameter object has an object `\"o\"` which stands for options.",
 	},
 	{
 		"blocktype": "heading",
