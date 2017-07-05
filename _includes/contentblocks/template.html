@@ -37,6 +37,12 @@
 
 	{% endif %}
 
+	{% if block.blocktype == "methode_list" %}
+
+		{% include contentblocks/blocks/methode_list/template.html %}
+
+	{% endif %}
+
 	{% if block.blocktype == "page_content" %}
 
 		{% include contentblocks/blocks/page_content/template.html %}
