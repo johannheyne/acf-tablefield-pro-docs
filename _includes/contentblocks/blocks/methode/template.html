@@ -1,0 +1,13 @@
+{% for methode in site.methodes %}
+
+	{% if methode.group == block.search.module %}
+
+		{{ methode.slug | prepend: "## Methode: " | markdownify }}
+
+		{% include contentblocks/template.html
+			contentblocks=methode.contentblocks
+		%}
+
+	{% endif %}
+
+{% endfor %}
