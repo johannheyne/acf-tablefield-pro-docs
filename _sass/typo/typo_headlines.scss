@@ -3,12 +3,14 @@ h1 {
 	font-weight: normal;
 	margin-top: $margin-vert;
 	margin-bottom: $margin-vert;
+	line-height: 1.2;
 }
 h2, h3, h4 {
 	color: $color-black;
 	font-weight: bold;
 	margin-top: $margin-vert * 2.6;
 	margin-bottom: $margin-vert;
+	line-height: 1.2;
 }
 
 
