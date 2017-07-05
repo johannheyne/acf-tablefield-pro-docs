@@ -1,12 +1,15 @@
 {% if include.parameters != nil %}
 
-{% assign title = include.title %}
+{% assign title = "Parameters" %}
 
-{% if title == "" %}
-	{% assign title = "Parameters" %}
+{% if include.title %}
+	{% assign title = include.title %}
 {% endif %}
 
-<h2>{{title}}</h2>
+{% if include.title != false %}
+	<h2>{{title}}</h2>
+{% endif %}
+
 
 <ul class="parameters">
 {% for parameter in include.parameters %}
