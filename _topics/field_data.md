@@ -10,25 +10,25 @@ contentblocks: [
 		"text": "Example table",
 	},
 	{
+		"blocktype": "table",
+		"class": {
+			"table": "sample_table",
+		},
+		"data": [
+			[
+				"A", "B",
+			],
+			[
+				"1", "some",
+			],
+			[
+				"2", "thing",
+			]
+		],
+	},
+	{
 		"blocktype": "html",
-		"content": "<table class=\"sample_table\">
-			<thead>
-				<th>A</th>
-				<th>B</th>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>some</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>thing</td>
-				</tr>
-			</tbody>
-		</table>
-
-		A table fields data are stored as a single JSON string. The table above is stored in the database as the following JSON string…
+		"content": "A table fields data are stored as a single JSON string. The table above is stored in the database as the following JSON string…
 		",
 	},
 	{
