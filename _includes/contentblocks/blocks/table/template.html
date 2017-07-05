@@ -1,6 +1,6 @@
 {% assign is_head = "true" %}
 
-<table class="table">
+<table class="table {{ block.class.table }}">
 {% for row in block.data %}
 
 	{% if is_head == "true" %}<thead>{% endif %}
