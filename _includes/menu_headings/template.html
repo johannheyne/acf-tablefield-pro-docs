@@ -1,4 +1,8 @@
-<p>Table of Page Content</p>
+{% if page.contentblocks %}
+	{% if page.table_of_content != "no" %}
+		<p>Table of Page Content</p>
+	{% endif %}
+{% endif %}
 
 	{% assign level = 1 %}
 

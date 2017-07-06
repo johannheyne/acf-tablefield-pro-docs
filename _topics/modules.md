@@ -2,6 +2,7 @@
 title: Modules
 topic: modules
 layout: page
+table_of_content: "no"
 
 contentblocks: [
 	{
