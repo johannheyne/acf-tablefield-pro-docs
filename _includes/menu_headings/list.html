@@ -1,0 +1,47 @@
+{% assign level = 1 %}
+
+	<li class="menu_heading">
+		<span>{{ include.title }}</span>
+
+{% for item in include.data %}
+
+	{% assign is_heading = "false" %}
+
+	{% if item.group == include.group %}
+		{% assign is_heading = "true" %}
+		{% assign text = item.slug %}
+	{% endif %}
+
+	{% if is_heading == "true" %}
+
+		{% if level == 2 %}
+
+			</li>
+
+		{% endif %}
+
+		{% if level < 2 %}
+
+			<ul>
+			{% assign level = level | plus: 1 %}
+
+		{% endif %}
+
+		{% if level > 2 %}
+
+			</li></ul>
+			{% assign level = level | minus: 1 %}
+
+		{% endif %}
+
+		<li><a href="#{{ include.id_prefix }}-{{ text | downcase | url_encode | replace: "+", "_" }}">{{ text }}</a>
+
+	{% endif %}
+
+{% endfor %}
+
+{% if level > 1 %}
+		</li>
+	</ul>
+
+{% endif %}

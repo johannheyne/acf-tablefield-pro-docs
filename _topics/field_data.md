@@ -6,7 +6,7 @@ layout: page
 contentblocks: [
 	{
 		"blocktype": "heading",
-		"level": "##",
+		"level": 2,
 		"text": "Example table",
 	},
 	{
@@ -63,7 +63,7 @@ contentblocks: [
 	},
 	{
 		"blocktype": "heading",
-		"level": "##",
+		"level": 2,
 		"text": "Table Parameter",
 	},
 	{
@@ -84,7 +84,7 @@ contentblocks: [
 	},
 	{
 		"blocktype": "heading",
-		"level": "##",
+		"level": 2,
 		"text": "Table Options",
 	},
 	{

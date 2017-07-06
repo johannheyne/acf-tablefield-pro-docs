@@ -1,1 +1,1 @@
-{{ block.text | prepend: " " | prepend: block.level | markdownify }}
+<h{{ block.level }} id="{{ block.text | downcase | url_encode | replace: "+", "_" }}">{{ block.text }}</h{{ block.level }}>

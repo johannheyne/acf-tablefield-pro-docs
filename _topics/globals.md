@@ -6,7 +6,7 @@ layout: page
 contentblocks: [
 	{
 		"blocktype": "heading",
-		"level": "##",
+		"level": 2,
 		"text": "Objects",
 	},
 	{

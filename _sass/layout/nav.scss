@@ -15,6 +15,28 @@
 	border-left: 1px solid $color-grey-light;
 	padding: 1rem 2rem;
 	overflow-x: scroll;
+
+	ul {
+
+	}
+
+	li {
+		padding-top: 0.15rem;
+		padding-bottom: 0.15rem;
+		line-height: 1.1;
+		font-size: 0.9rem;
+	}
+
+	li a {
+		font-size: inherit;
+	}
+
+	.menu_heading {
+		list-style-type: none;
+		margin-top: 0.4rem;
+	}
+
+
 }
 
 .nav + .page {
