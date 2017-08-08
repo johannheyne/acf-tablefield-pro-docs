@@ -7,7 +7,7 @@ h1 {
 }
 h2, h3, h4 {
 	color: $color-black;
-	font-weight: bold;
+	font-weight: normal;
 	margin-top: $margin-vert * 2.6;
 	margin-bottom: $margin-vert;
 	line-height: 1.2;
@@ -24,8 +24,8 @@ h2 {
 	color: darken( $color-green, 10 );
 }
 h3 {
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 }
 h4 {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
