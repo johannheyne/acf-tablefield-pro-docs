@@ -1,4 +1,19 @@
 .parameters {
+
+	list-style-type: none;
+
+	> li > strong {
+		font-weight: normal;
+		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	}
+
+	ul {
+		list-style-type: none;
+		margin-bottom: 0.8rem;
+		padding-left: 1rem;
+		opacity: 0.6;
+	}
+
 	.parameters-label {
 		color: grey;
 		font-size: 0.9em;
