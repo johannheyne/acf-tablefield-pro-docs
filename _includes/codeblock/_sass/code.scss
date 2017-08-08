@@ -5,7 +5,7 @@ pre {
 	margin-top: $margin-vert;
 	margin-bottom: $margin-vert;
 	background-color: transparentize( $color-blue-dark, 0.95 ) !important;
-	border: 1px solid transparentize( $color-blue-dark, 0.8 ) !important;
+	//border: 1px solid transparentize( $color-blue-dark, 0.8 ) !important;
 
 	&::selection {
 
@@ -46,28 +46,32 @@ code {
 	font-size: 0.9rem !important;
 	padding: 0 0.5em !important;
 	background-color: #f7f7f9 !important;
-	border: 1px solid #e1e1e8 !important;
+	//border: 1px solid #e1e1e8 !important;
 	color: #52606d;
 }
 
 .code-block {
 
-	margin-top: $margin-vert;
+	margin-top: $margin-vert * 2;
 	margin-bottom: $margin-vert;
 
 	pre {
-		margin-top: -1px !important;
+		margin-top: 0px !important;
 		margin-bottom: 0 !important;
 	}
 
 	.pre-title {
 
 		display: block;
-		border: #e1e1e8 solid 1px;
+		//border: #e1e1e8 solid 1px;
 		margin: 0;
-		padding: 14px 20px;
+		padding: 10px 0;
 		position: relative;
-		font-size: 0.8rem;
+		font-size: 1.4rem;
+
+		&:not(.closed) {
+			font-size: 0.8rem;
+		}
 
 		.fa {
 			width: 31px;
@@ -78,12 +82,14 @@ code {
 			background: #F7F7F9;
 			border-radius: 100%;
 			position: absolute;
-			top: 5px;
+			top: 0px;
 			right: 5px;
 			cursor: pointer;
 			color: #708090;
 			display: none;
 		}
+
+
 	}
 
 	// show close btn on hover if code is not closed
