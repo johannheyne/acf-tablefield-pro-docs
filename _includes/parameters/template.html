@@ -33,7 +33,7 @@
 				{% endif %}
 
 				{% if parameter.description %}
-					<li>{{ parameter.description | markdownify }}</li>
+					<li><span class="parameters-label">Description:</span> {{ parameter.description | markdownify }}</li>
 				{% endif %}
 
 			</ul>
