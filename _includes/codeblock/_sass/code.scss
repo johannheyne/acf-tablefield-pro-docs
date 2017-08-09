@@ -48,7 +48,7 @@ pre {
 		display: block;
 		width: 100%;
 		overflow: auto;
-		padding: 1em !important;
+		padding: 1em 1.4em !important;
 	}
 }
 
@@ -81,6 +81,7 @@ code {
 		padding: 10px 0;
 		position: relative;
 		font-size: 1.4rem;
+		cursor: pointer;
 
 		&:not(.closed) {
 			font-size: 0.8rem;
@@ -124,7 +125,7 @@ code {
 
 	code {
 		font-size: 0.9em !important;
-		background-color: none;
+		background-color: transparent;
 		border: none;
 	}
 }
