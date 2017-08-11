@@ -8,7 +8,7 @@
 
 {% if site[ collection ] %}
 
-	{% assign sorted = site[ collection ] | sort: 'order' %}
+	{% assign sorted = site[ collection ] | sort_natural: 'group' %}
 	{% assign grouped = sorted | group_by: 'slug' %}
 
 	{% assign group = false %}
