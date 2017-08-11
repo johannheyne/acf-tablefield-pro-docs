@@ -2,47 +2,43 @@
 title: Filters
 topic: filters
 layout: page
+contentblocks: [
+	{
+		"blocktype": "menu_topic",
+	},
+	{
+		"blocktype": "heading",
+		"level": 2,
+		"text": "Add a filter",
+	},
+	{
+		"blocktype": "codeblock",
+		"lang": "JS",
+		"style": "js",
+		"code": "ACFTableField.core.add_filter( scope, filterslug, handler );",
+	},
+	{
+		"blocktype": "html",
+		"content": "Example of adding a filter in a module…",
+	},
+	{
+		"blocktype": "codeblock_module_example",
+		"lang": "JS",
+		"style": "js",
+		"title": "Example",
+		"code": "t.init = function( p ) {
+			\n
+			\n	ACFTableField.core.add_filter( 'main', 'data_defaults', t.add_default_data );
+			\n
+			\n};
+			\n
+			\nt.add_default_data = function( default_data ) {
+			\n
+			\n	// add your default data
+			\n	default_data.p.o.myoption = 'default data';
+			\n
+			\n	return default_data;
+			\n}",
+	}
+]
 ---
-
-{% include menu_topic/template.html %}
-
-## Add a filter
-
-{% include codeblock/template.html
-lang="JS"
-style="js"
-code="ACFTableField.core.add_filter( scope, filterslug, handler );"
-%}
-
-### Example of adding a filter in a module
-
-{% include codeblock/template.html
-lang="JS"
-style="js"
-code="jQuery.noConflict();
-jQuery( document ).ready( function( $ ){
-
-	function ACFTableFieldMyModule() {
-
-		var t = this;
-
-		t.init = function( p ) {
-
-			ACFTableField.core.add_filter( 'main', 'data_defaults', t.add_default_data );
-
-		};
-
-		t.add_default_data = function( default_data ) {
-
-			// add your default data
-			default_data.p.o.myoption = 'default data';
-
-			return default_data;
-		}
-
-	};
-
-	ACFTableField.mymodule = new ACFTableFieldMyModule();
-
-});"
-%}
