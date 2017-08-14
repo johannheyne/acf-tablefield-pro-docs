@@ -15,7 +15,7 @@ contentblocks: [
 		"blocktype": "codeblock",
 		"lang": "JS",
 		"style": "js",
-		"code": "ACFTableField.core.add_filter( scope, filterslug, handler );",
+		"code": "ACFTableFieldPro.core.add_filter( scope, filterslug, handler );",
 	},
 	{
 		"blocktype": "html",
@@ -28,7 +28,7 @@ contentblocks: [
 		"title": "Example",
 		"code": "t.init = function( p ) {
 			\n
-			\n	ACFTableField.core.add_filter( 'main', 'data_defaults', t.add_default_data );
+			\n	ACFTableFieldPro.core.add_filter( 'main', 'data_defaults', t.add_default_data );
 			\n
 			\n};
 			\n

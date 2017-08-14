@@ -13,9 +13,9 @@ contentblocks: [
 		"blocktype": "codeblock",
 		"lang": "JS",
 		"style": "js",
-		"code": "ACFTableField.obj.document
-		\nACFTableField.obj.html
-		\nACFTableField.obj.body"
+		"code": "ACFTableFieldPro.obj.document
+		\nACFTableFieldPro.obj.html
+		\nACFTableFieldPro.obj.body"
 	},
 ]
 
