@@ -26,7 +26,7 @@ contentblocks: [
 		"lang": "JS",
 		"style": "js",
 		"title": "Example",
-		"code": "t.run = function( p ) {
+		"code": "t.init = function() {
 			\n
 			\n	ACFTableFieldPro.core.add_filter( 'main', 'data_defaults', t.add_default_data );
 			\n
