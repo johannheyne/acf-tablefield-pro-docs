@@ -39,6 +39,34 @@ contentblocks: [
 			\n
 			\n	return default_data;
 			\n}",
+	},
+	{
+		"blocktype": "heading",
+		"level": 2,
+		"text": "Provide a filter",
+	},
+	{
+		"blocktype": "codeblock",
+		"lang": "JS",
+		"style": "js",
+		"code": "var value = ACFTableFieldPro.core.do_filter( scope, filterslug, value );",
+	},
+	{
+		"blocktype": "html",
+		"content": "Example of providing a filter in a module…",
+	},
+	{
+		"blocktype": "codeblock_module_example",
+		"lang": "JS",
+		"style": "js",
+		"title": "Example",
+		"code": "t.init = function() {
+			\n
+			\n	var string = '';
+			\n
+			\n	string = ACFTableFieldPro.core.do_filter( 'main', 'filter_string', string );
+			\n
+			\n};"
 	}
 ]
 ---
