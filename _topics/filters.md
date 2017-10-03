@@ -49,7 +49,7 @@ contentblocks: [
 		"blocktype": "codeblock",
 		"lang": "JS",
 		"style": "js",
-		"code": "var value = ACFTableFieldPro.core.do_filter( scope, filterslug, value );",
+		"code": "var value = ACFTableFieldPro.core.do_filter( scope, filterslug, value, param );",
 	},
 	{
 		"blocktype": "html",
@@ -62,9 +62,12 @@ contentblocks: [
 		"title": "Example",
 		"code": "t.init = function() {
 			\n
-			\n	var string = '';
+			\n	var string = '',
+			\n		param = {
+			\n			'key': 'value'
+			\n		};
 			\n
-			\n	string = ACFTableFieldPro.core.do_filter( 'main', 'filter_string', string );
+			\n	string = ACFTableFieldPro.core.do_filter( 'main', 'filter_string', string, param );
 			\n
 			\n};"
 	}
