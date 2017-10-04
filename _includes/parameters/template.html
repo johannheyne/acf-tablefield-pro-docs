@@ -36,6 +36,18 @@
 					<li><span class="parameters-label">Description:</span> {{ parameter.description | markdownify }}</li>
 				{% endif %}
 
+				{% if parameter.code %}
+					<li>
+
+						{% include codeblock/template.html
+							lang="JS"
+							style="js"
+							code=parameter.code
+						%}
+
+					</li>
+				{% endif %}
+
 			</ul>
 		</li>
 
