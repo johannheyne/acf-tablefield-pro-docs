@@ -34,7 +34,9 @@
 
 		{% endif %}
 
-		<li><a href="#{{ include.id_prefix }}-{{ text | downcase | url_encode | replace: "+", "_" }}">{{ text }}</a>
+		{% if text != "kickstart" %}
+			<li><a href="#{{ include.id_prefix }}-{{ text | downcase | url_encode | replace: "+", "_" }}">{{ text }}</a>
+		{% endif %}
 
 	{% endif %}
 
