@@ -2,11 +2,15 @@
 
 	{% if methode.group == block.search.module %}
 
-		{{ methode.slug | prepend: "## Methode: " | markdownify }}
+		{% if methode.slug != "kickstart" %}
 
-		{% include contentblocks/template.html
-			contentblocks=methode.contentblocks
-		%}
+			{{ methode.slug | prepend: "## Methode: " | markdownify }}
+
+			{% include contentblocks/template.html
+				contentblocks=methode.contentblocks
+			%}
+
+		{% endif %}
 
 	{% endif %}
 
