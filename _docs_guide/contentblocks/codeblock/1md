@@ -1,0 +1,48 @@
+---
+title: Codeblock
+layout: docs_guide
+group: contentblocks
+slug: codeblock2
+menu_name: codeblock
+version: 1
+order: 5
+
+contentblocks: [
+	{
+		"blocktype": "codeblock",
+		"lang": "JS",
+		"style": "js",
+		"code": "{
+			\n	\"blocktype\": \"codeblock\",
+			\n	\"lang\": \"JS\",
+			\n	\"style\": \"js\",
+			\n	\"code\": \"\"
+			\n}"
+	},
+	{
+		"blocktype": "heading",
+		"text": "Writing the code example",
+		"level": 2,
+	},
+	{
+		"blocktype": "html",
+		"content": "Use <code>\\n</code> for new lines.<br>
+		Use tabs to indent.<br>
+		Escape quotes <code>\\\"</code>."
+	},
+	{
+		"blocktype": "codeblock",
+		"lang": "JS",
+		"style": "js",
+		"code": "{
+			\n	\"blocktype\": \"codeblock\",
+			\n	\"lang\": \"JS\",
+			\n	\"style\": \"js\",
+			\n	\"code\": \"
+			\n		\\n var key = \\\"string\\\"; //escape quotes
+			\n		\\n\"
+			\n}"
+	},
+]
+
+---
