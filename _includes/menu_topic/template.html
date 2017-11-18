@@ -41,7 +41,20 @@
 
 
 			<li {% if item.items[index].url == page.url%}class="active"{% endif %}>
-				<a href="{{ item.items[index].url | absolute_url }}" >{{ item.items[index].slug }}</a>
+
+				{% comment %}
+					In general, the slug will be used as the menu item name.
+					But because there cant be two eqal slugs, you can also set
+					a menu name as option.
+				{% endcomment %}
+
+				{% assign menu_name = item.items[index].slug %}
+
+				{% if item.items[index].menu_name %}
+					{% assign menu_name = item.items[index].menu_name %}
+				{% endif %}
+
+				<a href="{{ item.items[index].url | absolute_url }}" >{{ menu_name }}</a>
 			</li>
 		{% endif %}
 
