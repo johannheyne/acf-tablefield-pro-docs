@@ -1,0 +1,15 @@
+#page_title {
+
+	.cat {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.prefix {
+		opacity: 0.4;
+	}
+
+	.focus {
+		color: darken( $color-green, 10 );
+	}
+}

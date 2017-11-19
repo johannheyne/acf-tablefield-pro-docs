@@ -3,7 +3,7 @@
 {% if page.collection == "modules" %}
 
 	{% capture title %}
-		Module: "{{page.slug}}"
+		<span class="cat">Module</span> <span class="prefix">ACFTableFieldPro.</span><span class="focus">{{page.slug}}</span>
 	{% endcapture %}
 
 {% endif %}
@@ -11,7 +11,7 @@
 {% if page.collection == "methodes" %}
 
 	{% capture title %}
-		Methode: "{{page.slug}}"
+		<span class="cat">Methode</span> <span class="prefix">ACFTableFieldPro.{{page.group}}.</span><span class="focus">{{page.slug}}()</span>
 	{% endcapture %}
 
 {% endif %}
@@ -19,7 +19,7 @@
 {% if page.collection == "filters" %}
 
 	{% capture title %}
-		Filter: "{{page.slug}}"
+		<span class="cat">Filter</span> <span class="prefix">{{page.group}}:</span><span class="focus">{{page.slug}}</span>
 	{% endcapture %}
 
 {% endif %}
