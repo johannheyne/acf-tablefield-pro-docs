@@ -1,0 +1,14 @@
+<ul class="menu_collection">
+
+	{% for c in site.collections %}
+	    {% if c.label == include.collection %}
+	        {% assign collection = c.docs %}
+	    {% endif %}
+	{% endfor %}
+
+	{% for item in collection %}
+		{% if item.title %}
+			<li><a href="{{ item.url | absolute_url }}" >{{ item.title }}</a></li>
+		{% endif %}
+	{% endfor %}
+</ul>

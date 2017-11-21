@@ -1,14 +1,11 @@
 ---
-title: Todo
+title: Plans
 layout: page
-menu: Todo
 order: 2
 ---
-* Span
-* Import / Export
-* Copy & Paste
-* Translation
-* Tab Navigation
+{% include menu_collection/template.html collection="plans" %}
+
+
 * Content Types
 	- Checkbox (Cookie: Settings( ID, Dauer))
 	- Number (Calculation)
@@ -16,5 +13,3 @@ order: 2
 	- Calculation ( Sum )
 	- Image
 	- Content Blocks
-* get_table_field()
-* Preview Tab

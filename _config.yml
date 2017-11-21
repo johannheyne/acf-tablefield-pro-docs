@@ -40,6 +40,10 @@ sass:
 
 
 collections:
+    plans:
+        output: true,
+        permalink: plans/:path/
+
     actions:
         output: true,
         permalink: actions/:path/
