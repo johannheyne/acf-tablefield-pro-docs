@@ -1,10 +1,18 @@
+{% if include.module_name == nil %}
+	{% assign module_name = 'MyModule' %}
+{% endif %}
+
+{% if include.module_name != nil %}
+	{% assign module_name = include.module_name %}
+{% endif %}
+
 {% assign code = '' %}
 
 {% capture code %}
 jQuery.noConflict();
 jQuery( document ).ready( function( $ ) {
 
-	function ACFTableFieldMyModule() {
+	function ACFTableField{{ module_name }}() {
 
 		var t = this;
 
@@ -12,7 +20,7 @@ jQuery( document ).ready( function( $ ) {
 
 	};
 
-	ACFTableFieldPro.mymodule = new ACFTableFieldMyModule();
+	ACFTableFieldPro.{{ module_name | downcase }} = new ACFTableField{{ module_name }}();
 
 });
 {% endcapture %}
@@ -20,7 +28,7 @@ jQuery( document ).ready( function( $ ) {
 {% capture code %}{{ code | strip }}{% endcapture %}
 
 {% include codeblock/template.html
-	title="Example"
+	title=include.title
 	lang="JS"
 	style="js"
 	code=code
