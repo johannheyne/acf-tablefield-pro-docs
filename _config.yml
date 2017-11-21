@@ -40,6 +40,10 @@ sass:
 
 
 collections:
+    actions:
+        output: true,
+        permalink: actions/:path/
+
     filters:
         output: true,
         permalink: filters/:path/

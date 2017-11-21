@@ -24,4 +24,12 @@
 
 {% endif %}
 
+{% if page.collection == "actions" %}
+
+	{% capture title %}
+		<span class="cat">Action</span> <span class="prefix">{{page.group}}:</span><span class="focus">{{page.slug}}</span>
+	{% endcapture %}
+
+{% endif %}
+
 <h1 id="page_title">{{title}}</h1>
