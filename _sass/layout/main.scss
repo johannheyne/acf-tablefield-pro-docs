@@ -1,3 +1,7 @@
 .main {
 	padding: 1rem 2rem;
 }
+.invisible-list + ul,
+.invisible-list + ul ul {
+	list-style: none;
+}
