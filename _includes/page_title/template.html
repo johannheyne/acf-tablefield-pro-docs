@@ -22,6 +22,12 @@
 		<span class="cat">Filter</span> <span class="prefix">{{page.group}}:</span><span class="focus">{{page.slug}}</span>
 	{% endcapture %}
 
+	{% if page.lang == "php" %}
+		{% capture title %}
+			<span class="cat">Filter</span> <span class="prefix">acf_tablefield</span><span class="focus">{{page.slug}}</span>
+		{% endcapture %}
+	{% endif %}
+
 {% endif %}
 
 {% if page.collection == "actions" %}
