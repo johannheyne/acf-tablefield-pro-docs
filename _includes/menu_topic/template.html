@@ -55,12 +55,14 @@
 				{% endif %}
 
 				{% assign lang = '' %}
+				{% assign pre = '' %}
 
 				{% if item.items[index].lang %}
 					{% capture lang %}<span>({{item.items[index].lang | upcase}})</span>{% endcapture %}
+					{% capture pre %}acf_tablefield{% endcapture %}
 				{% endif %}
 
-				<a href="{{ item.items[index].url | absolute_url }}" >{{ menu_name }} {{ lang }}</a>
+				<a href="{{ item.items[index].url | absolute_url }}" >{{ pre }}{{ menu_name }}</a>{{ lang }}
 			</li>
 		{% endif %}
 
