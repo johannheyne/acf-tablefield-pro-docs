@@ -54,7 +54,13 @@
 					{% assign menu_name = item.items[index].menu_name %}
 				{% endif %}
 
-				<a href="{{ item.items[index].url | absolute_url }}" >{{ menu_name }}</a>
+				{% assign lang = '' %}
+
+				{% if item.items[index].lang %}
+					{% capture lang %}<span>({{item.items[index].lang | upcase}})</span>{% endcapture %}
+				{% endif %}
+
+				<a href="{{ item.items[index].url | absolute_url }}" >{{ menu_name }} {{ lang }}</a>
 			</li>
 		{% endif %}
 
