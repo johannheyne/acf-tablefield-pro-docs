@@ -18,6 +18,8 @@ layout: page
 
 	* <input type="checkbox" readonly>
 		**Involve collisions with other colspans and rowspans**
+		<br>BUG: A cell below another cell with colspan in same column has no options in colspan select field.
+		<br>(See repository "playground" brunch "tests/collisions")
 
 		* <input type="checkbox" checked readonly>
 			**Set state of amount of cols and rows**
