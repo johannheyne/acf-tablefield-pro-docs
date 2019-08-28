@@ -12,4 +12,4 @@ order: 2
 	- Price (Calculation)
 	- Calculation ( Sum )
 	- Image
-	- Content Blocks
+	- Content Blocks?

@@ -5,3 +5,7 @@
 .invisible-list + ul ul {
 	list-style: none;
 }
+
+.list-follows + ul, ol {
+	list-style: disc !important;
+}
