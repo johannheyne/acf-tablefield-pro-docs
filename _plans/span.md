@@ -33,8 +33,11 @@ layout: page
 * <input type="checkbox" readonly>
 	**Add and remove cols and rows**
 	- Adding columns and rows does not affect span
-	- Removing a column must be prevented when the column traverses a colspan cell whose colspan extends beyond the last column.
-	- Removing a rows must be prevented when the row traverses a rowspan cell whose rowspan extends beyond the last row.
+	- <input type="checkbox" checked readonly> **Removing a column** must be prevented when the column traverses a colspan cell whose colspan extends beyond the last column.
+	- <input type="checkbox"> **Removing a column** must be prevented when all cells belongs to an colspan.
+	- <input type="checkbox" checked readonly>Table data must updated by 'hs' (has Span)
+	- <input type="checkbox" checked readonly>Table class "span-hide" must updated.
+	- <input type="checkbox"> **Removing a row** must be prevented when the row traverses a rowspan cell whose rowspan extends beyond the last row.
 * <input type="checkbox" readonly>
 	**Sort cols and rows**
 	- Prevent collisions with other colspans and rowspans
