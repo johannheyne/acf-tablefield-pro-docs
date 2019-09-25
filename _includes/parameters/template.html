@@ -29,15 +29,6 @@
 					<li><span class="parameters-label">Options:</span> {{ parameter.options | join: ', ' }}</li>
 				{% endif %}
 
-				{% if parameter.message %}
-					<li>
-						{% include messageinline/template.html
-							type=parameter.message.type
-							text=parameter.message.message
-						%}
-					</li>
-				{% endif %}
-
 				{% if parameter.description %}
 					<li><span class="parameters-label">Description:</span> {{ parameter.description | markdownify }}</li>
 				{% endif %}
@@ -51,6 +42,15 @@
 							code=parameter.code
 						%}
 
+					</li>
+				{% endif %}
+
+				{% if parameter.message %}
+					<li>
+						{% include messageinline/template.html
+							type=parameter.message.type
+							text=parameter.message.message
+						%}
 					</li>
 				{% endif %}
 
