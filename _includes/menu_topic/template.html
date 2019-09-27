@@ -21,7 +21,12 @@
 		{% assign index = index | minus:1 %}
 
 		{% assign path = item.items[index].url | remove_first: "/" | split: '/' %}
-		{% assign subfolder = path[1] %}
+
+		{% assign subfolder = path[1] | replace: "%20", " " %}
+
+		{% if item.items[index].group_title != nil %}
+			{% assign subfolder = item.items[index].group_title | replace: "%20", " " %}
+		{% endif %}
 
 		{% if path[2] != "_kickstart" %}
 
@@ -48,10 +53,14 @@
 					a menu name as option.
 				{% endcomment %}
 
-				{% assign menu_name = item.items[index].slug %}
+				{% assign menu_name = item.items[index].slug | replace: "%20", " " %}
 
 				{% if item.items[index].menu_name %}
 					{% assign menu_name = item.items[index].menu_name %}
+				{% endif %}
+
+				{% if item.items[index].slug_title != nil %}
+					{% assign menu_name = item.items[index].slug_title | replace: "%20", " " %}
 				{% endif %}
 
 				{% assign lang = '' %}

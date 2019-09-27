@@ -72,7 +72,13 @@ collections:
         output: true,
         permalink: modules/:path/
 
+    guides:
+        output: true,
+        permalink: guides/:path/
+
+
 
 urls:
     filters: filters/
     topics: topics/
+    guides: guides/
