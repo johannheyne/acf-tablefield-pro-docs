@@ -1,0 +1,47 @@
+---
+title: Table Cell Walker
+layout: methode
+group: main
+slug: table_cell_walker
+version: latest
+
+contentblocks: [
+	{
+		"blocktype": "codeblock",
+		"lang": "JS",
+		"style": "js",
+		"code": "ACFTableFieldPro.main.table_cell_walker( table, function( object ) {
+		\n
+		\n	var current_section_key = object.data_section_key,
+		\n		current_row_index = object.row_index,
+		\n		current_row_opt = object.row_opt,
+		\n		current_cell_index = object.cell_index,
+		\n		current_cell_opt = object.cell_opt,
+		\n		current_cell_cont = object.cell_cont;
+		\n
+		\n	return true; // stops the walker
+		\n});",
+	},
+	{
+		"blocktype": "heading",
+		"text": "Parameters",
+		"level": 3,
+	},
+	{
+		"blocktype": "parameters",
+		"data": [
+			{
+				"name": "<a href=\"/topics/table_object/\">table</a>",
+				"type": "object",
+				"description": "The object of the table to walk the table data.",
+			},
+			{
+				"name": "callback",
+				"type": "function",
+				"description": "A function with one object parameter."
+			}
+		],
+	},
+]
+
+---
