@@ -24,8 +24,8 @@
 
 		{% assign subfolder = path[1] | replace: "%20", " " %}
 
-		{% if item.items[index].group_title != nil %}
-			{% assign subfolder = item.items[index].group_title | replace: "%20", " " %}
+		{% if site.data.guides_groups[ subfolder ] != nil %}
+			{% assign subfolder = site.data.guides_groups[ subfolder ].name | replace: "%20", " " %}
 		{% endif %}
 
 		{% if path[2] != "_kickstart" %}
