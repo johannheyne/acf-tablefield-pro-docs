@@ -2,7 +2,7 @@
 title: Sortable Cols
 layout: filter
 group: main
-slug: sortable_col/sortable_parameter
+slug: sortable_col_sortable_parameter
 version: latest
 
 contentblocks: [
@@ -10,7 +10,7 @@ contentblocks: [
 		"blocktype": "codeblock",
 		"lang": "JS",
 		"style": "js",
-		"code": "ACFTableFieldPro.core.add_filter( 'main', 'sortable_col/sortable_parameter', function( sortable_param, param ) {
+		"code": "ACFTableFieldPro.core.add_filter( 'main', 'sortable_col_sortable_parameter', function( sortable_param, param ) {
 			\n
 			\n	return sortable_param;
 			\n} );"
