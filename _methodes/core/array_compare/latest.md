@@ -28,7 +28,7 @@ contentblocks: [
 		\n	var array_1 = [ 'one', 'two' ],
 		\n	 	array_2 = [ 'one', 'tree' ];
 		\n
-		\n	var similarities = ACFTableFieldPro.core.array_move( array_1, array_2 );
+		\n	var similarities = ACFTableFieldPro.core.array_compare( array_1, array_2 );
 		\n
 		\n	// result of similarities = [ 'one' ]
 		\n};
