@@ -39,6 +39,35 @@ contentblocks: [
 		\n// your functions
 		\n",
 	},
-
+	{
+		"blocktype": "heading",
+		"text": "Rules",
+		"level": 2,
+	},
+	{
+		"blocktype": "heading",
+		"text": "Event Action",
+		"level": 3,
+	},
+	{
+		"blocktype": "html",
+		"content": "Every event methode, mostly from a \"click\", must begin with an \"event\" action like in the following example…",
+	},
+	{
+		"blocktype": "codeblock",
+		"lang": "JS",
+		"style": "js",
+		"code": "
+			\nACFTableFieldPro.obj.body.on( 'click', '.' + ACFTableFieldPro.main.param.classes, function( event ) {
+			\n
+			\n	ACFTableFieldPro.core.do_action( 'main', 'event', {
+			\n		event: event,
+			\n		module: 'module-name',
+			\n		id: 'something-unique'
+			\n	} );
+			\n
+			\n} );
+			\n"
+	}
 ]
 ---
