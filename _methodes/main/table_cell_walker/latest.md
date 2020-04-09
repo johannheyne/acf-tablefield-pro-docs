@@ -12,12 +12,15 @@ contentblocks: [
 		"style": "js",
 		"code": "ACFTableFieldPro.main.table_cell_walker( table, function( object ) {
 		\n
-		\n	var current_section_key = object.data_section_key,
-		\n		current_row_index = object.row_index,
-		\n		current_row_opt = object.row_opt,
-		\n		current_cell_index = object.cell_index,
-		\n		current_cell_opt = object.cell_opt,
-		\n		current_cell_cont = object.cell_cont;
+		\n	/*
+		\n	object.is_new_row
+		\n	object.data_section_key
+		\n	object.row_index
+		\n	object.row_opt
+		\n	object.cell_index
+		\n	object.cell_opt
+		\n	object.cell_cont
+		\n	*/
 		\n
 		\n	return true; // stops the walker
 		\n});",
