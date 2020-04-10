@@ -19,6 +19,10 @@
 		font-size: 0.8em;
 	}
 
+	> li pre {
+		margin-top: 2px;
+	}
+
 	li .code-block {
 		margin: 0;
 	}
@@ -27,5 +31,6 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		display: inline-block;
+		vertical-align: top;
 	}
 }
