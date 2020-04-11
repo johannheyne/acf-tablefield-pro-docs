@@ -9,7 +9,7 @@
 </ul>
 <p>Topics</p>
 <ul class="menu_main">
-	{% assign sorted_topics = (site.topics | sort: 'title') %}
+	{% assign sorted_topics = (site.topics | sort: 'menupos') %}
 	{% for item in sorted_topics %}
 		{% if item.title %}
 			<li {% if page.collection == item.topic or page.topic and page.topic == item.topic %}class="active"{% endif %}><a href="{{ item.url | absolute_url }}" >{{ item.title }}</a></li>

@@ -1,5 +1,6 @@
 ---
 title: Docs Guide
+menupos: 9
 topic: docs_guide
 layout: page
 table_of_content: "no"

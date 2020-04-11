@@ -1,5 +1,6 @@
 ---
 title: Filters
+menupos: 2
 topic: filters
 layout: page
 contentblocks: [
