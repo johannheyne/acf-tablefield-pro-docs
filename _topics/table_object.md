@@ -24,10 +24,10 @@ var table = ACFTableFieldPro.main.tables[ {field_key} ];\n
 \n	data_defaults: {object},
 \n	field_key: {string},
 \n	field_settings: {object},
-\n	obj_bottom_row: {jQuery object},
 \n	obj_root: {jQuery object},
-\n	obj_table: {jQuery object},
+\n	obj_table: {object},
 \n	obj_top_row: {jQuery object},
+\n	obj_bottom_row: {jQuery object},
 \n	overlays: {object},
 \n	row_count: {number},
 \n}
