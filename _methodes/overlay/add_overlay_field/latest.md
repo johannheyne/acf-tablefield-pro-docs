@@ -32,14 +32,57 @@ contentblocks: [
 			},
 			{
 				"name": "type",
-				"type": "array",
-				"options": ["text", "textarea", "select", "radio", "checkbox", "note"],
+				"type": "string",
+				"options": ["select", "(not yet integrated: text, textarea, radio, checkbox, note)"],
 				"description": "Defines the type of the field."
 			},
 			{
 				"name": "options",
 				"type": "object",
 				"description": "Defines the values and labels of an select, radio or checkbox field by `'value': 'label'` pairs."
+			},
+			{
+				"name": "data_key",
+				"type": "string",
+				"description": "Defines the key of the option to store."
+			},
+			{
+				"name": "default_value",
+				"type": "string",
+				"description": "Defines the key of the option to store.",
+				"optional": "y"
+			},
+			{
+				"name": "label",
+				"type": "string",
+				"description": "Defines the label of the field.",
+				"optional": "y"
+			},
+			{
+				"name": "description",
+				"type": "string",
+				"description": "Defines the description of the field.",
+				"optional": "y"
+			},
+			{
+				"name": "placeholder",
+				"type": "string",
+				"description": "Defines the placeholder on text and textarea fields.",
+				"optional": "y"
+			},
+			{
+				"name": "conditionals",
+				"type": "boolean, array (array of key value objects)",
+				"default": "false",
+				"description": "Determines the visibility of the field depending on the status of other fields",
+				"code": "[
+				\n	{
+				\n		'field_group_id': id,
+				\n		'field_id': id,
+				\n		'field_value': value,
+				\n		'comparison': '==' // ==, !=, <, >
+				\n	}
+				\n]"
 			},
 			{
 				"name": "on_change",
@@ -85,15 +128,17 @@ contentblocks: [
 			\n	ACFTableFieldPro.overlay.add_overlay_field({
 			\n		'id': 'my_field', // unique
 			\n		'field_group_id': false, // registered fieldgroup id in t.state.fieldgroups
-			\n		'type': false, // text, textarea, select, radio, checkbox, note
+			\n		'type': false, // select (more to come: text, textarea, radio, checkbox, note )
 			\n		'options': {
 			\n			'value': 'label'
 			\n		},
 			\n		'data_key': false,
 			\n		'default_value': false,
+			\n		'label': false, // boolean, string
 			\n		'description': false,
 			\n		'placeholder': false,
 			\n		'fixed': false, // ?
+			\n		/* not implemented yet
 			\n		'conditionals': [
 			\n			{
 			\n				'field_group_id': id,
@@ -101,7 +146,7 @@ contentblocks: [
 			\n				'field_value': value,
 			\n				'comparison': '=='
 			\n			}
-			\n		],
+			\n		],*/
 			\n		'on_change': [ t.field_changed ] // array of functions
 			\n	});
 			\n
