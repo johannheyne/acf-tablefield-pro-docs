@@ -53,6 +53,12 @@ contentblocks: [
 				"optional": "y"
 			},
 			{
+				"name": "default_value_table",
+				"type": "string",
+				"description": "Defines an option key that is used for the table option when default_value is empty equal 'inherit'. Inherit should not be an root option",
+				"optional": "y"
+			},
+			{
 				"name": "label",
 				"type": "string",
 				"description": "Defines the label of the field.",
@@ -93,6 +99,7 @@ contentblocks: [
 				\n	conditionals: [],
 				\n	data_key: \"\",
 				\n	default_value: \"\",
+				\n	default_value_table: \"\",
 				\n	description: false,
 				\n	field_group_id: \"\",
 				\n	hide_on_overlay_id: [],
