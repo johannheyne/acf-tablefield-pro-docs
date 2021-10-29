@@ -1,13 +1,24 @@
+{% for c in site.collections %}
+	{% if c.label == include.collection %}
+		{% assign collection = c.docs %}
+	{% endif %}
+{% endfor %}
+
+<h3>Todo</h3>
 <ul class="menu_collection">
 
-	{% for c in site.collections %}
-	    {% if c.label == include.collection %}
-	        {% assign collection = c.docs %}
-	    {% endif %}
+	{% for item in collection %}
+		{% if item.title and item.status != "done" %}
+			<li><a href="{{ item.url | absolute_url }}" >{{ item.title }}</a></li>
+		{% endif %}
 	{% endfor %}
+</ul>
+
+<h3>Done</h3>
+<ul class="menu_collection">
 
 	{% for item in collection %}
-		{% if item.title %}
+		{% if item.title and item.status == "done" %}
 			<li><a href="{{ item.url | absolute_url }}" >{{ item.title }}</a></li>
 		{% endif %}
 	{% endfor %}
