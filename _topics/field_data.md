@@ -45,7 +45,7 @@ contentblocks: [
 		\n			\"uf\":\"n\" // use footer
 		\n			\"cols\":\"2\"
 		\n			\"rows\":\"3\"
-		\n			\"changed\":\"1\" // default table was changed
+		\n			\"changed\":true // default table was changed
 		\n		}
 		\n	},
 		\n	\"c\":[
@@ -118,14 +118,14 @@ contentblocks: [
 		"code": "{
 		\n	\"t\":{
 		\n		\"o\":{
-		\n			\"uh\":1
+		\n			\"uh\":\"y\"
 		\n		}
 		\n	}
 		\n}",
 	},
 	{
 		"blocktype": "html",
-		"content": "The object `\"p\"` stands for parameters of this table. This parameter object has an object `\"o\"` which stands for options.",
+		"content": "The object `\"t\"` stands for parameters of this table. This parameter object has an object `\"o\"` which stands for options.",
 	},
 	{
 		"blocktype": "heading",
@@ -136,10 +136,28 @@ contentblocks: [
 		"blocktype": "table",
 		"data": [
 			[
-				"Name", "Type", "Decription"
+				"Name", "Decription", "Type", "Value", "Module"
 			],
 			[
-				"uh", "boolean", "Use header "
+				"changed", "Whether the table content was edited", "boolean", "false/true", "main"
+			],
+			[
+				"uh", "Use header ", "string", "y/n", "thead"
+			],
+			[
+				"uf", "Use footer", "string", "y/n", "tfoot"
+			],
+			[
+				"cols", "Amount of the table body colums", "integer", "", "cols_rows_limit"
+			],
+			[
+				"rows", "Amount of the table body rows", "integer", "", "cols_rows_limit"
+			],
+			[
+				"ct", "Content type of cells", "string", "st/<a href=\"\">ed</a>", "cell_content_type"
+			],
+			[
+				"tb", "Toolbar for wysiwyg editor", "string", "full", "editor"
 			]
 		],
 	},
