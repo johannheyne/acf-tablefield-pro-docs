@@ -154,10 +154,10 @@ contentblocks: [
 				"rows", "Amount of the table body rows", "integer", "", "cols_rows_limit"
 			],
 			[
-				"ct", "Content type of cells", "string", "st/<a href=\"\">ed</a>", "cell_content_type"
+				"ct", "Content type of cells", "string", "st/<a href=\"/modules/extends/editor/latest\">ed</a>", "cell_content_type"
 			],
 			[
-				"tb", "Toolbar for wysiwyg editor", "string", "full", "editor"
+				"tb", "Toolbar for wysiwyg editor", "string", "full", "<a href=\"/modules/extends/editor/latest\">editor</a>"
 			]
 		],
 	},
