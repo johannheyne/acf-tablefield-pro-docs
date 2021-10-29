@@ -39,7 +39,13 @@ contentblocks: [
 		"code": "{
 		\n	\"t\":{
 		\n		\"o\":{
-		\n			\"uh\":\"1\"
+		\n			\"ct\":\"ed\" // content type
+		\n			\"tb\":\"basic\" // toolbar for wysiwyg editor
+		\n			\"uh\":\"y\" // use header
+		\n			\"uf\":\"n\" // use footer
+		\n			\"cols\":\"2\"
+		\n			\"rows\":\"3\"
+		\n			\"changed\":\"1\" // default table was changed
 		\n		}
 		\n	},
 		\n	\"c\":[
