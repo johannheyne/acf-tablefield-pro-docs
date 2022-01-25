@@ -1,7 +1,7 @@
 ---
-title: Span
+title: Span Options
 layout: page
-status: done
+status:
 ---
 
 ## Feature Requests
