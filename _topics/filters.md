@@ -62,15 +62,16 @@ contentblocks: [
 		"title": "Example",
 		"code": "t.init = function() {
 			\n
-			\n	ACFTableFieldPro.core.add_filter( 'main', 'data_defaults', t.add_default_data, 20 );
+			\n	ACFTableFieldPro.core.add_filter( 'main', 'filtername', t.filter_function, 20 );
 			\n};
 			\n
-			\nt.add_default_data = function( default_data ) {
+			\nt.filter_function = function( value, param ) {
 			\n
-			\n	// add your default data
-			\n	default_data.p.o.myoption = 'default data';
+			\n	// additional permanent parameters:
+			\n	// param.filter.part = 'main'
+			\n	// param.filter.filter: 'filtername'
 			\n
-			\n	return default_data;
+			\n	return value;
 			\n}",
 	},
 	{
