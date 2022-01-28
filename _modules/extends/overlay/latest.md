@@ -120,13 +120,16 @@ contentblocks: [
 		"code": "function init() {
 			\n
 			\n	add_filter( $GLOBALS['acf_tablefield_pro']->id . '/field_settings_end', array( $this, 'filter_field_settings' ), 10, 1 );
+			\n	add_filter( $GLOBALS['acf_tablefield_pro']->id . '/field_settings_defaults', array( $this, 'field_settings_defaults' ), 10, 1 );
 			\n}
+			\n
+			\n// Implements checkboxes
 			\n
 			\nfunction filter_field_settings( $settings ) {
 			\n
 			\n	foreach ( $settings as $key => $item ) {
 			\n
-			\n		if ( array_key_exists( $item['name'], $GLOBALS['acf_tablefield_pro']->state['toolbar_cells'] ) ) {
+			\n		//if ( array_key_exists( $item['name'], $GLOBALS['acf_tablefield_pro']->state['toolbar_cells'] ) ) {
 			\n
 			\n			if ( $item['name'] === '<overlay_id>' ) {
 			\n
@@ -135,10 +138,26 @@ contentblocks: [
 			\n				$settings[ $key ]['choices']['field/<field_id>'] = __( '<label>', $GLOBALS['acf_tablefield_pro']->text_domain );
 			\n				$settings[ $key ]['choices']['content/<content_id>'] = __( '<label>', $GLOBALS['acf_tablefield_pro']->text_domain );
 			\n			}
-			\n		}
+			\n		//}
 			\n	}
 			\n
 			\n	return $settings;
+			\n}
+			\n
+			\n// Defines checkbox checked by default
+			\n
+			\nfunction field_settings_defaults( $defaults ) {
+			\n
+			\n	if ( empty( $defaults['<overlay_id>'] ) ) {
+			\n
+			\n		$defaults['<overlay_id>'] = array();
+			\n	}
+			\n
+			\n	array_push( $defaults['<overlay_id>'], 'tab/kickstart' );
+			\n	array_push( $defaults['<overlay_id>'], 'fieldgroup/kickstart' );
+			\n	array_push( $defaults['<overlay_id>'], 'field/kickstart' );
+			\n
+			\n	return $defaults;
 			\n}",
 	},
 
@@ -256,7 +275,7 @@ contentblocks: [
 				\nt.add_content_type_option = function( p ) {
 				\n
 				\n	if ( p.id === 'cont_type') {
-				\n		
+				\n
 				\n		p.options['<slug>'] = '<label>';
 				\n	}
 				\n
@@ -282,9 +301,9 @@ contentblocks: [
 				\nt.my_cell_editor = function() {
 				\n
 				\n	t.obj.body.on( 'click.acf-table-pro-field-my-editor-open', '[data-cont-type=\"<slug>\"]', function( e ) {
-				\n		
+				\n
 				\n		e.stopImmediatePropagation();
-				\n		
+				\n
 				\n		// get cell content
 				\n		var that = $( this ),
 				\n			obj_cell_cont = that.find( '.' + ACFTableFieldPro.main.param.classes.table_cell_cont ),
