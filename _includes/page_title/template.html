@@ -11,7 +11,13 @@
 {% if page.collection == "methodes" %}
 
 	{% capture title %}
-		<span class="cat">Methode</span> <span class="prefix">ACFTableFieldPro.{{page.group}}.</span><span class="focus">{{page.slug}}()</span>
+		<span class="cat">Methode</span>
+
+		{% if page.lang != "php" %}
+			<span class="prefix">ACFTableFieldPro.{{page.group}}.</span>
+		{% endif %}
+
+		<span class="focus">{{page.slug}}()</span>
 	{% endcapture %}
 
 {% endif %}
