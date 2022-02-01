@@ -68,7 +68,10 @@
 
 				{% if item.items[index].lang %}
 					{% capture lang %}<span>({{item.items[index].lang | upcase}})</span>{% endcapture %}
-					{% capture pre %}acf_tablefield{% endcapture %}
+
+					{% if item.items[index].layout == 'filter' or item.items[index].layout == 'action' %}
+						{% capture pre %}acf_tablefield{% endcapture %}
+					{% endif %}
 				{% endif %}
 
 				<a href="{{ item.items[index].url | absolute_url }}" >{{ pre }}{{ menu_name }}</a>{{ lang }}
