@@ -14,7 +14,14 @@
 			<ul>
 
 				{% if parameter.optional %}
-					<li><span class="parameters-label">Optional:</span> yes</li>
+
+					{% if parameter.optional == 'y' %}
+						<li><span class="parameters-label">Optional:</span> yes</li>
+					{% endif %}
+					{% if parameter.optional == 'n' %}
+						<li><span class="parameters-label">Optional:</span> no</li>
+					{% endif %}
+
 				{% endif %}
 
 				{% if parameter.type %}
