@@ -12,9 +12,6 @@ contentblocks: [
 		"content": "This module gives the possibilities to open and assign content to an default overlay with dynamic content. It comes also with the possibility to use an individual overlay of the dom."
 	},
 
-
-
-
 	{
 		"blocktype": "heading",
 		"text": "Open an overlay",
