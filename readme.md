@@ -1,8 +1,24 @@
 # Readme
 
-### update gems
+### Start Jekyll
 ```
 # terminal
+bundle exec jekyll serve
+```
+[http://localhost:4000/](http://localhost:4000/)
+
+----
+### updates gem manager
+```
+# terminal
+gem update --system
+```
+
+### list gems, list outdated gems, updates gems
+```
+# terminal
+gem list
+gem outdated
 gem update
 ```
 
@@ -10,16 +26,4 @@ gem update
 ```
 # terminal
 bundle update
-```
-
-### start jekyll
-```
-# terminal
-jekyll serve
-```
-
-### start jekyll without gem versions warnings
-```
-# terminal
-bundle exec jekyll serve
 ```
