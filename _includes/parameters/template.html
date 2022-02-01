@@ -3,13 +3,15 @@
 <ul class="parameters">
 {% for parameter in include.parameters %}
 
-		{% if include.lang == "js" %}
-			<li><strong>{{ parameter.name }}</strong>
-		{% endif %}
+		<li>
 
-		{% if include.lang == nil %}
-			<li><strong>${{ parameter.name }}</strong>
-		{% endif %}
+			{% if include.lang == "js" %}
+				<strong>{{ parameter.name }}</strong>
+			{% endif %}
+
+			{% if include.lang == nil or include.lang == "php" %}
+				<strong>${{ parameter.name }}</strong>
+			{% endif %}
 
 			<ul>
 
