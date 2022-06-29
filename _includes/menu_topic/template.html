@@ -28,7 +28,7 @@
 			{% assign subfolder = site.data.guides_groups[ subfolder ].name | replace: "%20", " " %}
 		{% endif %}
 
-		{% if path[2] != "_kickstart" %}
+		{% if path[2] != "_kickstart" and path[2] != "_trash" %}
 
 			{% if group != subfolder %}
 
