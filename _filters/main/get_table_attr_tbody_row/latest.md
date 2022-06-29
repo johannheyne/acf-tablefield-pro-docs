@@ -1,9 +1,9 @@
 ---
-title: Get Table Attr tbody Cell
+title: Get Table Attr tbody Row
 layout: filter
 group: main
 lang: php
-slug: /get_table/attr/tbody/cell
+slug: /get_table/attr/tbody/row
 version: latest
 
 contentblocks: [
@@ -11,12 +11,12 @@ contentblocks: [
 		"blocktype": "codeblock",
 		"lang": "PHP",
 		"style": "php",
-		"code": "add_filter( 'acf_tablefield/get_table/attr/tbody/cell', function( $attr, $cell_data, $col_index, $table_data ) {
+		"code": "add_filter( 'acf_tablefield/get_table/attr/tbody/row', function( $attr, $data ) {
 			\n
 			\n	// array_push( $attr['class'], 'highlighted' );
 			\n
 			\n	return $attr;
-			\n} );"
+			\n}, 10, 2 );"
 	},
 	{
 		"blocktype": "html",
