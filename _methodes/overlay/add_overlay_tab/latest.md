@@ -64,7 +64,12 @@ contentblocks: [
 		"lang": "JS",
 		"style": "js",
 		"title": "Example",
-		"code": "t.run = function() {
+		"code": "t.init = function() {
+			\n
+			\n	ACFTableFieldPro.core.add_action( 'main', 'init_begin', t.add_options );
+			\n}
+			\n
+			\nt.add_options = function() {
 			\n
 			\n	ACFTableFieldPro.overlay.add_overlay_tab({
 			\n		'overlay_id': ['my_overlay'], // required
